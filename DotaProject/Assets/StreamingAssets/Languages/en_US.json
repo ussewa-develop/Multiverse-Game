@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+    "key": "StartGame",
+    "value": "Start Game"
+    },
+	{
+	"key": "Bestiary",
+    "value": "Bestiary"
+	},
+	{
+	"key": "Options",
+    "value": "Options"
+	},
+	{
+	"key": "QuitGame",
+    "value": "Quit Game"
+	},
+	{
+    "key": "Attribute",
+    "value": "Attribute"
+    },
+	{
+	"key": "Universal",
+    "value": "Universal"
+	},
+	{
+	"key": "Agillity",
+    "value": "Agillity"
+	},
+	{
+	"key": "Strength",
+    "value": "Strenght"
+	},
+	{
+	"key": "Intelligence",
+    "value": "Intelligence"
+	},
+	{
+	"key": "Melee",
+    "value": "Melee"
+	},
+	{
+	"key": "Range",
+    "value": "Range"
+	},
+	{
+	"key": "TypeAttack",
+    "value": "Type attack:    "
+	},
+	{
+	"key": "DamageType",
+    "value": "Damage Type:     "
+	},
+	{
+	"key": "Ability",
+    "value": "Ability: "
+	},
+	{
+	"key": "ClickOnSkillForChange",
+    "value": "Click on skill for change"
+	},
+	{
+	"key": "Physical",
+    "value": "Physical"
+	},
+	{
+	"key": "Slash",
+    "value": "Slash"
+	},
+	{
+	"key": "Cryo",
+    "value": "Cryo"
+	},
+	{
+	"key": "Darkness",
+    "value": "Darkness"
+	},
+	{
+	"key": "Poison",
+    "value": "Poison"
+	},
+	{
+	"key": "Passive",
+    "value": "Passive"
+	},
+	{
+	"key": "Unit_Target",
+    "value": "Unit Target"
+	},
+	{
+	"key": "No_Target",
+    "value": "No Target"
+	},
+	{
+	"key": "Target_Area",
+    "value": "Target Area"
+	},
+	{
+	"key": "Point_Target",
+    "value": "Point Target"
+	},
+	{
+	"key": "Weapon",
+    "value": "Weapon: "
+	},
+	{
+	"key": "WeaponType",
+    "value": "Weapon type:    "
+	},
+	{
+	"key": "Sword",
+    "value": "Sword"
+	},
+	{
+	"key": "Fists",
+    "value": "Fists"
+	},
+	{
+	"key": "Axe",
+    "value": "Axe"
+	},
+	{
+	"key": "Orb",
+    "value": "Orb"
+	},
+	{
+	"key": "Dual_Weapon",
+    "value": "Dual Weapon"
+	},
+	{
+	"key": "One_handed_weapon",
+    "value": "One handed weapon"
+	},
+	{
+	"key": "Unarmed",
+    "value": "Unarmed"
+	},
+	{
+	"key": "Weapon_in_two_hands",
+    "value": "Weapon in two hands"
+	}
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "items": [
+    {
+    "key": "StartGame",
+    "value": "Старт игры"
+    },
+	{
+	"key": "Bestiary",
+    "value": "Бестиарий"
+	},
+	{
+	"key": "Options",
+    "value": "Настройки"
+	},
+	{
+	"key": "QuitGame",
+    "value": "Выход из игры"
+	},
+	{
+    "key": "Attribute",
+    "value": "Атрибут"
+    },
+	{
+	"key": "Universal",
+    "value": "Универсал"
+	},
+	{
+	"key": "Agillity",
+    "value": "Ловкость"
+	},
+	{
+	"key": "Strength",
+    "value": "Сила"
+	},
+	{
+	"key": "Intelligence",
+    "value": "Интеллект"
+	},
+	{
+	"key": "Melee",
+    "value": "Ближний бой"
+	},
+	{
+	"key": "Range",
+    "value": "Дальний бой"
+	},
+	{
+	"key": "TypeAttack",
+    "value": "Тип атаки:    "
+	},
+	{
+	"key": "DamageType",
+    "value": "Тип урона:     "
+	},
+	{
+	"key": "Ability",
+    "value": "Тип: "
+	},
+	{
+	"key": "ClickOnSkillForChange",
+    "value": "Нажми на скилл для изменения"
+	},
+	{
+	"key": "Physical",
+    "value": "Физический"
+	},
+	{
+	"key": "Slash",
+    "value": "Разрез"
+	},
+	{
+	"key": "Cryo",
+    "value": "Лёд"
+	},
+	{
+	"key": "Darkness",
+    "value": "Тьма"
+	},
+	{
+	"key": "Poison",
+    "value": "Яд"
+	},
+	{
+	"key": "Passive",
+    "value": "Пассивная"
+	},
+	{
+	"key": "Unit_Target",
+    "value": "Направленная на цель"
+	},
+	{
+	"key": "No_Target",
+    "value": "Ненаправленная"
+	},
+	{
+	"key": "Target_Area",
+    "value": "Направленная на область"
+	},
+	{
+	"key": "Point_Target",
+    "value": "Направленная на точку"
+	},
+	{
+	"key": "Weapon",
+    "value": "Оружие: "
+	},
+	{
+	"key": "WeaponType",
+    "value": "Тип оружия:    "
+	},
+	{
+	"key": "Sword",
+    "value": "Меч"
+	},
+	{
+	"key": "Fists",
+    "value": "Кулаки"
+	},
+	{
+	"key": "Axe",
+    "value": "Топор"
+	},
+	{
+	"key": "Orb",
+    "value": "Сфера"
+	},
+	{
+	"key": "Dual_Weapon",
+    "value": "Двойное оружие"
+	},
+	{
+	"key": "One_handed_weapon",
+    "value": "Одноручное оружие"
+	},
+	{
+	"key": "Unarmed",
+    "value": "Безоружный"
+	},
+	{
+	"key": "Weapon_in_two_hands",
+    "value": "Оружие в двух руках"
+	}
+  ]
+}
