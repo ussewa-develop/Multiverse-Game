@@ -48,7 +48,7 @@ public class SwitchButton : MonoBehaviour
         menuManager = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuManager>();
     }
 
-    public void OnClick()
+    public void ClickOnHeroScreen()
     {
         if(hero!=null)
         {
@@ -58,6 +58,11 @@ public class SwitchButton : MonoBehaviour
         {
             SwitchToHeroIcons();
         }
+    }
+
+    public void OnClick(string word)
+    {
+        menuManager.OpenMenu(word);
     }
 
     private void SwitchToHeroScreen()

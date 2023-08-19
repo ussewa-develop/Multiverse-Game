@@ -5,9 +5,9 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     [Header("Unique name for menu")]
-    public string menuName;
-    [Header("Camera for screen")]
-    public Camera menuCamera;
+    [Tooltip("Уникальный ключ для поиска меню")] public string menuName;
+    //[Header("Camera for screen")]
+    //[Tooltip("Камера, которая переключает на нужное меню")] public Camera menuCamera;
     [Header("Hide other UI?")]
-    public bool hideOtherUI;
+    [Tooltip("На этом экране выключается \"OtherUI\"")] public bool hideOtherUI;
 }

@@ -159,6 +159,18 @@
 	{
 	"key": "Concept",
     "value": "Concept"
+	},
+	{
+	"key": "Heros",
+    "value": "Heros"
+	},
+	{
+	"key": "Artefacts",
+    "value": "Artefacts"
+	},
+	{
+	"key": "Others",
+    "value": "Others"
 	}
   ]
 }

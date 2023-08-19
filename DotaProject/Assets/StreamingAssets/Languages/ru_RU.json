@@ -159,6 +159,18 @@
 	{
 	"key": "Concept",
     "value": "Концепт"
+	},
+	{
+	"key": "Heros",
+    "value": "Герои"
+	},
+	{
+	"key": "Artefacts",
+    "value": "Артефакты"
+	},
+	{
+	"key": "Others",
+    "value": "Прочее"
 	}
   ]
 }
