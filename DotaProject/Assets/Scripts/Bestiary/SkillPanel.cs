@@ -18,7 +18,6 @@ public class SkillPanel : MonoBehaviour
     public GameObject toolTip;
     public TextMeshProUGUI textTip;
     public TextMeshProUGUI damageTypeText;
-    public Image damageTypeIcon;
 
     public void SetSkillInPanel(WikiSkill skill, Canvas canvas)
     {
@@ -34,10 +33,9 @@ public class SkillPanel : MonoBehaviour
         if (skill.IsDamaging)
         {
             damageTypeText.gameObject.SetActive(true);
-            damageTypeIcon.gameObject.SetActive(true);
 
-            damageTypeText.text = Localizator.Localize("DamageType") + Localizator.Localize(skill.GetDamageType().ToString());
-            damageTypeIcon.sprite = skill.GetDamageTypeIcon();
+            damageTypeText.text = Localizator.Localize("DamageType") + 
+                IconLoader.LoadSmile(skill.GetDamageType())+Localizator.Localize(skill.GetDamageType().ToString());
         }
         transform.position = skill.gameObject.transform.position - new Vector3(0, 3.5f, 0);
     }

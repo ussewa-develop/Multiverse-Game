@@ -46,11 +46,11 @@
 	},
 	{
 	"key": "TypeAttack",
-    "value": "Type attack:    "
+    "value": "Type attack: "
 	},
 	{
 	"key": "DamageType",
-    "value": "Damage Type:     "
+    "value": "Damage Type: "
 	},
 	{
 	"key": "Ability",
@@ -106,7 +106,7 @@
 	},
 	{
 	"key": "WeaponType",
-    "value": "Weapon type:    "
+    "value": "Weapon type: "
 	},
 	{
 	"key": "Sword",
@@ -139,6 +139,26 @@
 	{
 	"key": "Weapon_in_two_hands",
     "value": "Weapon in two hands"
+	},
+	{
+	"key": "AttackIcon",
+    "value": "Attack icon:"
+	},
+	{
+	"key": "BattleAbilities",
+    "value": "Battle Abilities"
+	},
+	{
+	"key": "Race_and_Not_battle_abilities",
+    "value": "Race/Not battle abilities"
+	},
+	{
+	"key": "ElementOfAttack",
+    "value": "Element of attack: "
+	},
+	{
+	"key": "Concept",
+    "value": "Concept"
 	}
   ]
 }

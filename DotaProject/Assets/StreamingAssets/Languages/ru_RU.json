@@ -46,11 +46,11 @@
 	},
 	{
 	"key": "TypeAttack",
-    "value": "Тип атаки:    "
+    "value": "Тип атаки: "
 	},
 	{
 	"key": "DamageType",
-    "value": "Тип урона:     "
+    "value": "Тип урона: "
 	},
 	{
 	"key": "Ability",
@@ -70,7 +70,7 @@
 	},
 	{
 	"key": "Cryo",
-    "value": "Лёд"
+    "value": "Крио"
 	},
 	{
 	"key": "Darkness",
@@ -106,7 +106,7 @@
 	},
 	{
 	"key": "WeaponType",
-    "value": "Тип оружия:    "
+    "value": "Тип оружия: "
 	},
 	{
 	"key": "Sword",
@@ -139,6 +139,26 @@
 	{
 	"key": "Weapon_in_two_hands",
     "value": "Оружие в двух руках"
+	},
+	{
+	"key": "AttackIcon",
+    "value": "Иконка атаки:"
+	},
+	{
+	"key": "BattleAbilities",
+    "value": "Боевые способности"
+	},
+	{
+	"key": "Race_and_Not_battle_abilities",
+    "value": "Рассовые/Не боевые способности"
+	},
+	{
+	"key": "ElementOfAttack",
+    "value": "Елемент атаки: "
+	},
+	{
+	"key": "Concept",
+    "value": "Концепт"
 	}
   ]
 }

@@ -16,19 +16,16 @@ public abstract class EntityScreen : MonoBehaviour
     [SerializeField] Image entityConceptSprite;
     [SerializeField] TextMeshProUGUI heroNameText;
     [SerializeField] TextMeshProUGUI elementEntityText;
-    [SerializeField] Image elementEntityImage;
     [SerializeField] public Image iconAbillityPrefab;
     [SerializeField] public RectTransform summonContentPrefab; 
     [SerializeField] public RectTransform contentField;
     [SerializeField] public Canvas canvasForSpells;
     [Header("\t\tAttack/Weapon")]
     [SerializeField] TextMeshProUGUI typeAttackText;
-    [SerializeField] Image typeAttackImage;
     [SerializeField] TextMeshProUGUI elementAttackText;
     [SerializeField] Image elementAttackImage;
     [SerializeField] TextMeshProUGUI weaponText;
     [SerializeField] TextMeshProUGUI weaponTypeText;
-    [SerializeField] Image weaponTypeImage;
     [SerializeField] Image attackIcon;
 
     private void Start()
@@ -48,19 +45,16 @@ public abstract class EntityScreen : MonoBehaviour
 
         entityConceptSprite.sprite = entity.GetConceptSprite();
 
-        elementEntityText.text = Localizator.Localize(entity.GetElement().ToString());
-        elementEntityImage.sprite = IconLoader.LoadIcon(entity.GetElement());
+        elementEntityText.text = IconLoader.LoadSmile(entity.GetElement()) + Localizator.Localize(entity.GetElement().ToString());
 
-        typeAttackText.text = Localizator.Localize("TypeAttack") + Localizator.Localize(entity.GetAttackType().ToString());
-        typeAttackImage.sprite = IconLoader.LoadIcon(entity.GetAttackType());
+        typeAttackText.text = Localizator.Localize("TypeAttack") + IconLoader.LoadSmile(entity.GetAttackType()) + Localizator.Localize(entity.GetAttackType().ToString());
 
         weaponText.text = Localizator.Localize("Weapon") + Localizator.Localize(entity.GetWeapon().ToString());
         weaponTypeText.text = Localizator.Localize("WeaponType") + Localizator.Localize(entity.GetWeaponType().ToString());
-        weaponTypeImage.sprite = IconLoader.LoadIcon(entity.GetWeaponType());
         attackIcon.sprite = IconLoader.LoadIcon(entity.GetWeapon());
 
-        elementAttackText.text = "Attack element:    " + Localizator.Localize(entity.GetAttackElement().ToString());
-        elementAttackImage.sprite = IconLoader.LoadIcon(entity.GetAttackElement());
+        elementAttackText.text = Localizator.Localize("ElementOfAttack") + IconLoader.LoadSmile(entity.GetAttackElement()) + Localizator.Localize(entity.GetAttackElement().ToString());
+
 
         for (int skillId = 0; skillId < entity.skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
         {

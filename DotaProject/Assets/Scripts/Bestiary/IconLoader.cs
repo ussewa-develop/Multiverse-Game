@@ -28,4 +28,14 @@ public class IconLoader : MonoBehaviour
     {
         return Resources.Load<Sprite>("!Icons/Attributes/" + attribute.ToString());
     }
+
+    public static string LoadSmile(Hero.Element element)
+    {
+        return "<sprite name=" + element.ToString() + "> ";
+    }
+
+    public static string LoadSmile(Hero.TypeAttack typeAttack)
+    {
+        return "<sprite name=" + typeAttack.ToString() + "> ";
+    }
 }
