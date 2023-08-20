@@ -37,6 +37,7 @@ public class SwitchButton : MonoBehaviour
     public void OnClick(string word) //выставляем этот метод в кнопке, если идет переход на любой другой экран в границах сцены
     {
         menuManager.OpenMenu(word);
+        EventManager.OnSwitchingMenu();
     }
 
     private void SwitchToHeroScreen()
