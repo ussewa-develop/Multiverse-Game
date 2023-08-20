@@ -146,7 +146,7 @@ public class WikiSkill : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         DestroyPanel();
         panel = Instantiate(panelPrefab);
-        panel.SetSkillInPanel(this, canvasForSkillPanel);
+        panel.SetSkillInPanel(this, canvasForSkillPanel, 3.5f);
     }
 
     public void DestroyPanel()

@@ -101,7 +101,7 @@
     "value": "Направленная на точку"
 	},
 	{
-	"key": "Weapon",
+	"key": "WeaponText",
     "value": "Оружие: "
 	},
 	{
@@ -165,12 +165,24 @@
     "value": "Герои"
 	},
 	{
-	"key": "Artefacts",
+	"key": "Artifacts",
     "value": "Артефакты"
 	},
 	{
 	"key": "Others",
     "value": "Прочее"
+	},
+	{
+	"key": "None",
+    "value": "Нет"
+	},
+	{
+	"key": "Weapon",
+    "value": "Оружие"
+	},
+	{
+	"key": "Armour",
+    "value": "Броня"
 	}
   ]
 }

@@ -49,7 +49,7 @@ public abstract class EntityScreen : MonoBehaviour
 
         typeAttackText.text = Localizator.Localize("TypeAttack") + IconLoader.LoadSmile(entity.GetAttackType()) + Localizator.Localize(entity.GetAttackType().ToString());
 
-        weaponText.text = Localizator.Localize("Weapon") + Localizator.Localize(entity.GetWeapon().ToString());
+        weaponText.text = Localizator.Localize("WeaponText") + Localizator.Localize(entity.GetWeapon().ToString());
         weaponTypeText.text = Localizator.Localize("WeaponType") + Localizator.Localize(entity.GetWeaponType().ToString());
         attackIcon.sprite = IconLoader.LoadIcon(entity.GetWeapon());
 

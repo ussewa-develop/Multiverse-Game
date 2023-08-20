@@ -19,9 +19,10 @@ public class SkillPanel : MonoBehaviour
     public TextMeshProUGUI textTip;
     public TextMeshProUGUI damageTypeText;
 
-    public void SetSkillInPanel(WikiSkill skill, Canvas canvas)
+
+
+    public void SetSkillInPanel(WikiSkill skill)
     {
-        gameObject.transform.SetParent(canvas.transform, false);
         skillNameText.text = skill.GetName();
         skillDescText.text = skill.GetDescription();
         skillIcon.sprite = skill.GetIcon();
@@ -34,11 +35,46 @@ public class SkillPanel : MonoBehaviour
         {
             damageTypeText.gameObject.SetActive(true);
 
-            damageTypeText.text = Localizator.Localize("DamageType") + 
-                IconLoader.LoadSmile(skill.GetDamageType())+Localizator.Localize(skill.GetDamageType().ToString());
+            damageTypeText.text = Localizator.Localize("DamageType") +
+                IconLoader.LoadSmile(skill.GetDamageType()) + Localizator.Localize(skill.GetDamageType().ToString());
         }
         transform.position = skill.gameObject.transform.position - new Vector3(0, 3.5f, 0);
     }
+
+
+    #region SetSkillInPanel overrides
+
+    public void SetSkillInPanel(WikiSkill skill, Canvas canvas)
+    {
+        SetSkillInPanel(skill);
+        gameObject.transform.SetParent(canvas.transform, false);   
+    }
+
+    public void SetSkillInPanel(WikiSkill skill, float yOffset)
+    {
+        SetSkillInPanel(skill);
+        transform.position = skill.gameObject.transform.position - new Vector3(0, yOffset, 0);
+    }
+
+    public void SetSkillInPanel(WikiSkill skill, Canvas canvas, float yOffset)
+    {
+        SetSkillInPanel(skill, canvas);
+        transform.position = skill.gameObject.transform.position - new Vector3(0, yOffset, 0);
+    }
+
+    public void SetSkillInPanel(WikiSkill skill, Transform parent ,float yOffset)
+    {
+        SetSkillInPanel(skill);
+        transform.position = parent.position - new Vector3(0, yOffset, 0);
+    }
+
+    public void SetSkillInPanel(WikiSkill skill, Canvas canvas, Transform parent, float yOffset)
+    {
+        SetSkillInPanel(skill, canvas);
+        transform.position = parent.position - new Vector3(0, yOffset, 0);
+    }
+
+    #endregion
 
     public void Destroy()
     {
