@@ -22,34 +22,17 @@ public class SwitchButton : MonoBehaviour
         menuManager = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuManager>();
     }
 
-    public void ClickOnHeroScreen() //выставляем этот метод в кнопке, если идет переход на экран героя или с него (на экран иконок героев)
-    {
-        if(hero!=null)
-        {
-            SwitchToHeroScreen();
-        }
-        else
-        {
-            SwitchToHeroIcons();
-        }
-    }
-
     public void OnClick(string word) //выставляем этот метод в кнопке, если идет переход на любой другой экран в границах сцены
     {
         menuManager.OpenMenu(word);
-        EventManager.OnSwitchingMenu();
+        if (word == "heroScreen")
+        {
+            heroScreen.CreateHero(hero);
+        }
+        else
+        {
+            EventManager.OnSwitchingMenu();
+        }
     }
-
-    private void SwitchToHeroScreen()
-    {
-        heroScreen.CreateHero(hero);
-        menuManager.OpenMenu("heroScreen");
-    }
-
-    private void SwitchToHeroIcons()
-    {
-        menuManager.OpenMenu("heroGates");
-        EventManager.OnSwitchingMenu();
-    }
-    
+   
 }

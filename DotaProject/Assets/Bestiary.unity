@@ -4009,8 +4009,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1170306381}
         m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: ClickOnHeroScreen
-        m_Mode: 1
+        m_MethodName: OnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5061,8 +5061,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1396817080}
         m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: ClickOnHeroScreen
-        m_Mode: 1
+        m_MethodName: OnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5987,8 +5987,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1616897714}
         m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: ClickOnHeroScreen
-        m_Mode: 1
+        m_MethodName: OnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7064,8 +7064,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1814485795}
         m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: ClickOnHeroScreen
-        m_Mode: 1
+        m_MethodName: OnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7265,8 +7265,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1816835397}
         m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: ClickOnHeroScreen
-        m_Mode: 1
+        m_MethodName: OnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
