@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+//Скрипт для обьекта LocalizationManager 
+
 public class LocalizationManager : MonoBehaviour
 {
     private string currentLanguage;
@@ -26,6 +28,8 @@ public class LocalizationManager : MonoBehaviour
             }
         }
         currentLanguage = PlayerPrefs.GetString("Language");
+
+        gameObject.tag = "LocalizationManager";
 
         LoadLocalizedText(currentLanguage);
     }

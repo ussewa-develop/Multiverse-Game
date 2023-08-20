@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//скрипт для локализации текста
+//Требует TextMeshProUGUI на обьекте
 public class LocalizedText : MonoBehaviour
 {
     [SerializeField]
@@ -51,7 +53,7 @@ public class LocalizedText : MonoBehaviour
         text.text = localizationManager.GetLocalizedValue(key);
     }
 
-    public string GetLocalizedValue(string key)
+    public string GetLocalizedValue(string key) // поиск значения по ключу в словаре
     {
         return localizationManager.GetLocalizedValue(key);
     }

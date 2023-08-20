@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class GatesScreen : MonoBehaviour
 {
+    [Header("Скрипт для экрана с иконками")]
     public List<GameObject> childList;
 
     [SerializeField] Vector2 startCoordinate;
@@ -30,12 +31,12 @@ public class GatesScreen : MonoBehaviour
         }
     }
 
-    private void SetCoordinates()
+    private void SetCoordinates()//выставляет иконки по нужным координатам
     {
-        for (int heroIndex = 0; heroIndex < childList.Count; heroIndex++)
+        for (int iconIndex = 0; iconIndex < childList.Count; iconIndex++)
         {
-            childList[heroIndex].transform.localPosition = startCoordinate;
-            childList[heroIndex].transform.localPosition += new Vector3(offsetForIconsOnX * heroIndex, offsetForIconsOnY);
+            childList[iconIndex].transform.localPosition = startCoordinate;
+            childList[iconIndex].transform.localPosition += new Vector3(offsetForIconsOnX * iconIndex, offsetForIconsOnY);
         }
     }
 }

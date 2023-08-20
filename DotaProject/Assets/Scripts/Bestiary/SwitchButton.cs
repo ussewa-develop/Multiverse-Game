@@ -3,37 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+// Этот скрипт нужно добавить в эвент "OnClick" скрипта "Button"
 public class SwitchButton : MonoBehaviour
 {
-    /*
-    MenuManager menuManager;
-    public string menuName;
-    Hero hero;
-
-    private void Awake()
-    {
-        menuManager = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuManager>();
-        if(gameObject.TryGetComponent(out Hero hero))
-        {
-            menuName = "heroScreen";
-            hero = gameObject.GetComponent<Hero>();
-            Debug.Log(hero.GetName());
-        }
-    }
-
-    public void ChangeMenu()
-    {
-        if(menuName == "heroScreen")
-        {
-            menuManager.OpenMenu(menuName, hero);
-        }
-        else
-        {
-            menuManager.OpenMenu(menuName);
-        }
-       
-    }
-    */    
     Hero hero;
     HeroScreen heroScreen;
     MenuManager menuManager;
@@ -48,7 +22,7 @@ public class SwitchButton : MonoBehaviour
         menuManager = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<MenuManager>();
     }
 
-    public void ClickOnHeroScreen()
+    public void ClickOnHeroScreen() //выставляем этот метод в кнопке, если идет переход на экран героя или с него (на экран иконок героев)
     {
         if(hero!=null)
         {
@@ -60,7 +34,7 @@ public class SwitchButton : MonoBehaviour
         }
     }
 
-    public void OnClick(string word)
+    public void OnClick(string word) //выставляем этот метод в кнопке, если идет переход на любой другой экран в границах сцены
     {
         menuManager.OpenMenu(word);
     }

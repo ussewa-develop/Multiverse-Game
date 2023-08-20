@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Summon : Entity
 {
-    [HideInInspector] public string nameSummoner;
+    [HideInInspector] public string nameSummoner; //имя суммонера для загрузки спрайтов
 
     private void Start()
     {

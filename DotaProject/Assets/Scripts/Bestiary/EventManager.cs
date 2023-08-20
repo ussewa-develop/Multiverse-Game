@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Entity;
 
+//скрипт, который обрабатывает эвенты (так же хранит пол€ дл€ форматировани€ экрана геро€ с суммонами
+
 public class EventManager : MonoBehaviour
 {
-    public static Action SwitchMenu;
-    public static Action DestroyOtherSkills;
+    public static Action SwitchMenu; //эвент, который срабатывает, когда мен€етс€ окно
+    public static Action DestroyOtherSkills; //эвент, который срабатывает, когда нужно удалить другие скиллы в экране геро€
 
-    public static int yForSummonsContentfield = -1500;//!!!!!эта и нижн€€ должны быть одинаковые!!!!!!
-    public static int standartY = -1500;
+    public static int yForSummonsContentfield = -1500;//  }-\
+    //                                                      | - должны быть одинаковые 
+    public static int standartY = -1500;//                }-/
 
-    public static int deltaForY = 1450;
+    public static int deltaForY = 1450; // разница дл€ Y
 
     public static void SetStandartY()
     {

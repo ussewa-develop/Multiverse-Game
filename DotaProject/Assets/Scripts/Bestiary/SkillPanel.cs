@@ -21,7 +21,7 @@ public class SkillPanel : MonoBehaviour
 
 
 
-    public void SetSkillInPanel(WikiSkill skill)
+    public void SetSkillInPanel(WikiSkill skill) //установка значений скилла в панель
     {
         skillNameText.text = skill.GetName();
         skillDescText.text = skill.GetDescription();

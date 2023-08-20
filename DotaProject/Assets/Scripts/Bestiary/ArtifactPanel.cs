@@ -32,16 +32,16 @@ public class ArtifactPanel : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SetItemDesc(Artifact artifact, Canvas artifactCanvas)
+    public void Create(Artifact artifact, Canvas artifactCanvas) //создание панельки описания артефакта
     {
         gameObject.transform.SetParent(artifactCanvas.transform, false);
         itemNameText.text = artifact.GetItemName();
         itemDescText.text = artifact.GetItemDesc();    
         itemIcon.sprite = artifact.GetIconSprite();
         itemTypeText.text = Localizator.Localize(artifact.GetItemType().ToString()) 
-            + " (" + Localizator.Localize(artifact.GetItemSlot().ToString()) + ")";
+            + " (" + Localizator.Localize(artifact.GetItemSlot().ToString()) + ")"; // -> ItemType (ItemSlot)
         
-        transform.position = artifact.gameObject.transform.position - new Vector3(-1f, 3f, 0);
+        transform.position = artifact.gameObject.transform.position - new Vector3(-1f, 3f, 0); // спускаем панельку вниз и немного вправо
     }
 
 }

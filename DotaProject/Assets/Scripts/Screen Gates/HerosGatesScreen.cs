@@ -5,6 +5,6 @@ using UnityEngine.UIElements;
 
 public class HerosGatesScreen : GatesScreen
 {
+    [Header("Скрипт для экрана героя")]
     public HeroScreen heroScreen;
-    
 }

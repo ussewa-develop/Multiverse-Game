@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Tooltip("Скрипт для префаба канваса для нормального отображения панелек способностей")]
 public class CanvasForSpells : MonoBehaviour
 {
+    // Скрипт для префаба канваса для нормального отображения панелек способностей
+
     private void Start()
     {
         EventManager.SwitchMenu += Destroy;

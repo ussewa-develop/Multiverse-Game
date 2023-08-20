@@ -10,7 +10,7 @@ using static UnityEngine.EventSystems.EventTrigger;
 public abstract class EntityScreen : MonoBehaviour
 {
     //скрипт экрана героя
-    //если добавляю новые элементы и тд, обязательно добавить к ним иконки
+
     [Header("\t\t   General")]
     [SerializeField] Image entityIcon;
     [SerializeField] Image entityConceptSprite;
@@ -36,7 +36,7 @@ public abstract class EntityScreen : MonoBehaviour
     public void CreateEntity(Entity entity, Transform parent, float yCoordinate)
     {
         //
-        // Создаем канвас для нормального отображения 
+        // Создаем канвас для нормального отображения панелек способностей
         Canvas canvas = Instantiate(canvasForSpells, parent);
         //
 
@@ -63,7 +63,7 @@ public abstract class EntityScreen : MonoBehaviour
 
         yCoordinate -= 300;
 
-        for (int skillId = 0; skillId < entity.nonCombatSkills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
+        for (int skillId = 0; skillId < entity.nonCombatSkills.Length; skillId++) //создаю иконки не боевых способностей в зависимости от их количества
         {
             CreateSpell(entity.nonCombatSkills, skillId, yCoordinate, parent, canvas);
         }
@@ -75,7 +75,7 @@ public abstract class EntityScreen : MonoBehaviour
         CreateEntity(hero, contentField.transform, posY);        
     }
 
-    public void CreateSpell(WikiSkill[] skills, int skillId, float yCoordinate, Transform parent, Canvas canvas)
+    public void CreateSpell(WikiSkill[] skills, int skillId, float yCoordinate, Transform parent, Canvas canvas) //создаем иконки способностей героя
     {
         Image gate;
         gate = Instantiate(iconAbillityPrefab, gameObject.transform);
@@ -99,7 +99,7 @@ public abstract class EntityScreen : MonoBehaviour
                 
     }
 
-    private void CreateSummon(Summon summon)
+    private void CreateSummon(Summon summon) 
     {
         float posY = -1000;
         RectTransform summonContent;
@@ -109,7 +109,7 @@ public abstract class EntityScreen : MonoBehaviour
 
         summonContent.GetComponent<SummonWiki>().CreateEntity(summon,summonContent,posY);
 
-        EventManager.yForSummonsContentfield -= EventManager.deltaForY;
+        EventManager.yForSummonsContentfield -= EventManager.deltaForY; // координата Y для выставления позиции сумоннов
     }
 
     private Vector2 CalcCoordForSpell(int numberOfAbilities, int spellNumber, float posY)
@@ -127,7 +127,7 @@ public abstract class EntityScreen : MonoBehaviour
         return new Vector2(posX + deltaX, posY);
     }
 
-    private void SetNormalScale ()
+    private void SetNormalScale() //выставляем стандартный скейл для contentField
     {
         contentField.sizeDelta = new Vector2 (0, 2000);
     }

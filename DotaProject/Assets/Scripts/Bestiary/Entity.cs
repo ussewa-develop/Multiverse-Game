@@ -16,8 +16,8 @@ public abstract class Entity : MonoBehaviour
     [SerializeField] protected WeaponType weaponType;
     [SerializeField] protected Element attackElement;
     [Header("\t\t\tSpells")]
-    [SerializeField] public WikiSkill[] skills;
-    [SerializeField] public WikiSkill[] nonCombatSkills;
+    [SerializeField] public WikiSkill[] skills; // battle skills
+    [SerializeField] public WikiSkill[] nonCombatSkills; // race/non battle skills
 
     public enum TypeAttack
     {
@@ -49,6 +49,8 @@ public abstract class Entity : MonoBehaviour
         Unarmed,
         Weapon_in_two_hands
     }
+
+    #region Getters 
 
     public string GetName()
     {
@@ -94,4 +96,6 @@ public abstract class Entity : MonoBehaviour
     {
         return skills[id];
     }
+
+    #endregion
 }

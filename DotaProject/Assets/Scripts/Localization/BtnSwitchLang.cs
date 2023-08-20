@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Скрипт для кнопки переключения языка
+// Имя обьекта делать в стиле "ru-RU", "en-US" и тд чтобы не путатся
 public class BtnSwitchLang : MonoBehaviour
 {
     [SerializeField]
