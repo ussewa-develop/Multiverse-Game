@@ -62,7 +62,7 @@ public class WikiSkill : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private void Start()
     {
-        if(!ThisEntity())
+        if(!ThisEntityOrArtifact())
         {
             EventManager.SwitchMenu += Destroy;
         }
@@ -321,9 +321,33 @@ public class WikiSkill : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
     }
 
+    private bool ThisArtifact()
+    {
+        if (gameObject.GetComponent<Artifact>() != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool ThisEntityOrArtifact()
+    {
+        if (ThisArtifact() || ThisEntity())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void Destroy()
     {
-        if(!ThisEntity())
+        if(!ThisEntityOrArtifact())
         {
             Destroy(gameObject);
         }

@@ -19,7 +19,7 @@ public class Artifact : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     static ArtifactPanel panel;
     [SerializeField] Canvas canvasForArtDesc;
-    static bool safePanel = false; //переменная для сохранения панельки при нажатии на артефакт
+    static public bool safePanel = false; //переменная для сохранения панельки при нажатии на артефакт
 
     public enum ItemType 
     {
@@ -106,29 +106,42 @@ public class Artifact : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void ClickOn()
     {
         safePanel = !safePanel;
+        ArtifactPanel.OnChangeSafePanel();
     }
 
     public void CreatePanel()
     {
+        Vector3 posPrevSkill = Vector3.zero;//переменная для координат панельки предыдущего скилла
+        float deltaY = 7f; //
+        bool isFirstSkill = true;
+
         DestroyPanel();
         panel = Instantiate(artifactPrefab);
         panel.Create(GetComponent<Artifact>(), canvasForArtDesc);
         foreach (var skill in itemSkills) //перебираем массив скиллов
         {
-            panel.contentField.sizeDelta += new Vector2(0f,500f);
+            if (isFirstSkill)//проверяем на первый скилл в массиве
+            {
+                //ставим коорды самого контент филда и сразу расширяем контентфилд на количество скиллов
+                //
+                posPrevSkill = panel.contentField.transform.position; 
+                panel.contentField.sizeDelta += new Vector2(0f, 600f * itemSkills.Count);
+                //
+                isFirstSkill = false;
+            }
+            else //если это не первый скилл, уменьшаем разрез между ними
+            {
+                deltaY = 5.5f;
+            }
+            
+            SkillPanel skillPanel = Instantiate(panel.skillPanelPrefab, panel.contentField); // создаем панельку способности
+            skillPanel.SetSkillInPanel(skill,panel.transform, 0f); // устанавливаем значения в панельку для скилла
+            skillPanel.background.SetActive(false);
 
-            Canvas canvas = Instantiate(panel.canvasPrefab, panel.transform); // создаем канвас для описания способности
-            canvas.sortingOrder = 2;
+            skillPanel.transform.position = posPrevSkill - new Vector3(0f, deltaY, 0f);
 
-
-            SkillPanel skillPanel = Instantiate(panel.skillPanelPrefab); // создаем панельку способности
-
-            skillPanel.transform.position = Vector2.zero;
-            skillPanel.SetSkillInPanel(skill,canvas,panel.transform,2.6f); // устанавливаем значения в панельку для скилла | yOffset = 4.8f
-
-            canvas.transform.SetParent(panel.contentField,false);
-
-            skillPanel.transform.localPosition += new Vector3(5f,0); //панель почему-то создается на 5 юнитов влево, по этому подвигаем вправо
+            posPrevSkill = skillPanel.transform.position;
+            //skillPanel.transform.localPosition = new Vector3(0f,-775f*counterOfSkills,0f);
         }
 
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,19 +17,36 @@ public class ArtifactPanel : MonoBehaviour
     public SkillPanel skillPanelPrefab;
     public Canvas canvasPrefab;
     public RectTransform contentField;
+    public Button exitButton;
+
+    public static Action SafePanelEvent;
 
     private void Start()
     {
         EventManager.SwitchMenu += Destroy;
+        SafePanelEvent += EnableExitButton;
     }
 
     private void OnDestroy()
     {
         EventManager.SwitchMenu -= Destroy;
+        SafePanelEvent -= EnableExitButton;
+        
+    }
+
+    public void EnableExitButton()
+    {
+        exitButton.gameObject.SetActive(!exitButton.gameObject.activeSelf);
+    }
+
+    public static void OnChangeSafePanel()
+    {
+        SafePanelEvent?.Invoke();
     }
 
     public void Destroy()
     {
+        Artifact.safePanel = false;
         Destroy(gameObject);
     }
 
