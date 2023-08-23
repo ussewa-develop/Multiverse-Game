@@ -5,7 +5,8 @@ using UnityEngine.UIElements;
 
 public class GatesScreen : MonoBehaviour
 {
-    [Header("Скрипт для экрана с иконками")]
+    [Header("\t\tСкрипт для экрана с иконками")]
+    [Space]
     public List<GameObject> childList;
 
     [SerializeField] Vector2 startCoordinate;
