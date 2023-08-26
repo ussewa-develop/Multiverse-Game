@@ -15,6 +15,9 @@ public class SkillPanel : MonoBehaviour
     public GameObject toolTip;
     public TextMeshProUGUI textTip;
     public TextMeshProUGUI damageTypeText;
+    public TextMeshProUGUI cooldownText;
+    public TextMeshProUGUI manaText;
+    public TextMeshProUGUI actionPointText;
 
 
 
@@ -24,6 +27,9 @@ public class SkillPanel : MonoBehaviour
         skillDescText.text = skill.skillDesc;
         skillIcon.sprite = skill.skillIcon;
         skillTypeText.text = Localizator.Localize("Ability") + Localizator.Localize(skill.skillType.ToString());
+        cooldownText.text = skill.cooldown + " " + Localizator.Localize("Turn");
+        manaText.text = Localizator.Localize("Mana") + ": " + skill.manaCost;
+        actionPointText.text = Localizator.Localize("AP") + ": " + skill.actionPointCost;
         if (skill.IsHasSomeSkills)
         {
             toolTip.SetActive(true);

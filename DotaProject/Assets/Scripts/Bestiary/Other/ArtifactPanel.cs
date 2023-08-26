@@ -55,8 +55,13 @@ public class ArtifactPanel : MonoBehaviour
         itemIcon.sprite = artifactGate.artifact.icon;
         itemTypeText.text = Localizator.Localize(artifactGate.artifact.itemType.ToString()) 
             + " (" + Localizator.Localize(artifactGate.artifact.itemSlot.ToString()) + ")"; // -> ItemType (ItemSlot)
-        
-        transform.position = artifactGate.gameObject.transform.position - new Vector3(-1f, 3f, 0); // спускаем панельку вниз и немного вправо
+
+        float currentX = artifactGate.transform.localPosition.x; //координата в диапазоне от -960 до 960
+        float delta = 480f; 
+        float offsetX = currentX / delta;
+        float offsetY = 3f;
+
+        transform.position = artifactGate.gameObject.transform.position - new Vector3(offsetX, offsetY, 0); // спускаем панельку вниз и немного вправо
     }
 
 }

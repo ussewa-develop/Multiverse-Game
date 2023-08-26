@@ -18,6 +18,9 @@ public class SkillSO : ScriptableObject
     public string skillName;
     [TextArea] public string skillDesc;
     public Sprite skillIcon;
+    public int cooldown;
+    public int manaCost;
+    public int actionPointCost;
 
     [Space]
     [Header("\t\t\tOTHER")]

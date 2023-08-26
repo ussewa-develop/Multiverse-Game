@@ -369,6 +369,9 @@ MonoBehaviour:
   toolTip: {fileID: 166494777686617738}
   textTip: {fileID: 1030613258504819495}
   damageTypeText: {fileID: 7643312803932472144}
+  cooldownText: {fileID: 1435671258538212033}
+  manaText: {fileID: 4322657390654934857}
+  actionPointText: {fileID: 8135546760117195462}
 --- !u!1 &1435671257989737703
 GameObject:
   m_ObjectHideFlags: 0

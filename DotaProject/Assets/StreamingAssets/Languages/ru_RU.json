@@ -183,6 +183,18 @@
 	{
 	"key": "Armour",
     "value": "Броня"
+	},
+	{
+	"key": "Turn",
+    "value": "ход"
+	},
+	{
+	"key": "Mana",
+    "value": "Мана"
+	},
+	{
+	"key": "AP",
+    "value": "ОД"
 	}
   ]
 }

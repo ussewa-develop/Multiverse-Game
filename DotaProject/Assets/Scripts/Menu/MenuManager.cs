@@ -5,15 +5,10 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] List<Menu> screens;
     [SerializeField] List<GameObject> otherUI;
-    private HeroScreen heroScreen;
 
     private void Start()
     {
-        foreach (var screen in screens)
-        {
-            screen.gameObject.SetActive(false);
-        }
-        screens[0].gameObject.SetActive(true);
+        OpenMenu("bestiary");
     }
 
     public void OpenMenu(string menuName)
@@ -31,6 +26,7 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+
     private void HideOtherUI(bool value)
     {
         foreach (GameObject uiElement in otherUI)
@@ -38,5 +34,4 @@ public class MenuManager : MonoBehaviour
             uiElement.gameObject.SetActive(!value);
         }
     }
-
 }

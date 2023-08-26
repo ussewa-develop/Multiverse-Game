@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] public ArtifactSO artifact;
+    [SerializeField] public ArtifactSO artifact { get; private set;}
     [SerializeField] ArtifactPanel artifactPanelPrefab;
 
     static ArtifactPanel panel;

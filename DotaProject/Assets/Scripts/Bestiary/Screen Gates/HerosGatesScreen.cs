@@ -22,5 +22,4 @@ public class HerosGatesScreen : GatesScreen
             heroGate.Instantiate(hero);
         }
     }
-
 }

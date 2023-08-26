@@ -66,13 +66,13 @@ MonoBehaviour:
   entityConceptSprite: {fileID: 3979329098437436257}
   heroNameText: {fileID: 3979329097941606176}
   elementEntityText: {fileID: 3979329097666686737}
+  nonCombatSkillsText: {fileID: 2693199827578217316}
   iconAbillityPrefab: {fileID: 3706438725068202694, guid: 6852a873066048147aad43d8d8921cc8, type: 3}
   summonContentPrefab: {fileID: 3979329097151372014}
   contentField: {fileID: 0}
   canvasForSpells: {fileID: 6910706917939473790, guid: 97f6810c507989644882bafc878c1ab6, type: 3}
   typeAttackText: {fileID: 3979329098852489862}
   elementAttackText: {fileID: 3979329097347538606}
-  elementAttackImage: {fileID: 0}
   weaponText: {fileID: 3979329098909130775}
   weaponTypeText: {fileID: 3979329098038358046}
   attackIcon: {fileID: 3979329099235814918}

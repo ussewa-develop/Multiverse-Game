@@ -183,6 +183,18 @@
 	{
 	"key": "Armour",
     "value": "Armour"
+	},
+	{
+	"key": "Turn",
+    "value": "turn"
+	},
+	{
+	"key": "Mana",
+    "value": "Mana"
+	},
+	{
+	"key": "AP",
+    "value": "AP"
 	}
   ]
 }
