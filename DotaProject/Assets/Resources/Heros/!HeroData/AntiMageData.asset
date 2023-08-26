@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: AntiMageData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 334d4a2817f08a840afe5bb6cd6d1eae, type: 3}
+  concept: {fileID: 21300000, guid: 9f7f775b4665a584b85a6ccee519f609, type: 3}
+  entityName: Antimage
+  generalElement: 1
+  typeAttack: 0
+  weapon: 4
+  weaponType: 2
+  attackElement: 1
+  skills:
+  - {fileID: 11400000, guid: 383516ffbd24c0443845703f61fbd918, type: 2}
+  - {fileID: 11400000, guid: 68a7fec3c988a034bacf7adb7e17cb37, type: 2}
+  - {fileID: 11400000, guid: d9a1b368cdf872b418c9c370ba4978d1, type: 2}
+  - {fileID: 11400000, guid: 016d26bb47aa96946b5dea14de7e1e8a, type: 2}
+  nonCombatSkills: []
+  attribute: 1
+  multiverse: 0

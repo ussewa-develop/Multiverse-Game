@@ -484,13 +484,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 110323371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374e6535c33db8e4f870e62793807d4a, type: 3}
+  m_Script: {fileID: 11500000, guid: f2a38406414a7bb41a177bc05622b467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   childList: []
   startCoordinate: {x: -770, y: 440}
   offsetForIconsOnX: 147
   offsetForIconsOnY: 0
+  artifactIconPrefab: {fileID: 3027547431578116593, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
 --- !u!1 &147308549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,10 +2117,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1616897710}
-  - {fileID: 1170306375}
-  - {fileID: 1396817072}
-  - {fileID: 1816835394}
-  - {fileID: 1814485789}
   m_Father: {fileID: 1833935733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2145,6 +2142,7 @@ MonoBehaviour:
   offsetForIconsOnX: 147
   offsetForIconsOnY: 0
   heroScreen: {fileID: 1544755980}
+  heroIconPrefab: {fileID: 5248868229018846889, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
 --- !u!1 &433600860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,8 +2901,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1169622161}
   m_HandleRect: {fileID: 1169622160}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.99999887
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4404,358 +4402,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169622159}
   m_CullTransparentMesh: 1
---- !u!1 &1170306374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1170306375}
-  - component: {fileID: 1170306384}
-  - component: {fileID: 1170306383}
-  - component: {fileID: 1170306382}
-  - component: {fileID: 1170306381}
-  - component: {fileID: 1170306380}
-  - component: {fileID: 1170306389}
-  - component: {fileID: 1170306388}
-  - component: {fileID: 1170306387}
-  - component: {fileID: 1170306386}
-  - component: {fileID: 1170306385}
-  - component: {fileID: 1170306390}
-  - component: {fileID: 1170306391}
-  m_Layer: 5
-  m_Name: Button (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1170306375
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 424754537}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -657, y: 450}
-  m_SizeDelta: {x: 128, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1170306380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313ce818b3a24943916bf0f70776ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Alchemist
-  generalElement: 0
-  typeAttack: 0
-  weapon: 1
-  weaponType: 1
-  attackElement: 0
-  skills:
-  - {fileID: 1170306389}
-  - {fileID: 1170306388}
-  - {fileID: 1170306387}
-  - {fileID: 1170306386}
-  - {fileID: 1170306385}
-  nonCombatSkills: []
-  attribute: 0
-  multiverse: 0
---- !u!114 &1170306381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc0bc8ed0be5534e88893a9d0596a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1170306382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1616897712}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1170306381}
-        m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: heroScreen
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1170306383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e131a05c3dd583e459edaaf3b280f5ba, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1170306384
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_CullTransparentMesh: 1
---- !u!114 &1170306385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Chemical Rage
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 4666589b1416aad458c7de0d1408c29f, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Greevil's Greed
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 32e0ac12aedb9cf41be989769501d49f, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Corrosive Weaponry
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: a25396f91306e7947bd1db8877353dce, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Unstable Concoction
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 288bbc200bddda3438c9ba34e069304c, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills:
-  - {fileID: 1170306390}
-  - {fileID: 1170306391}
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Acid Spray
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 657bc3b46e84bfb49a6256bf198ca4d7, type: 3}
-  skillType: 3
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 4
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Unstable Concoction Throw
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: c3749ba96f61e3d438fa1b8f800c2d44, type: 3}
-  skillType: 1
-  IsHasSomeSkills: 0
-  otherSkills:
-  - {fileID: 1170306388}
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1170306391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170306374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Test
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: e8d72e56af810db41b37aea9fb3982f8, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
 --- !u!1 &1183621086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,335 +5208,6 @@ Transform:
   m_Father: {fileID: 1854582645}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1396817071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1396817072}
-  - component: {fileID: 1396817083}
-  - component: {fileID: 1396817082}
-  - component: {fileID: 1396817081}
-  - component: {fileID: 1396817080}
-  - component: {fileID: 1396817079}
-  - component: {fileID: 1396817078}
-  - component: {fileID: 1396817077}
-  - component: {fileID: 1396817076}
-  - component: {fileID: 1396817075}
-  - component: {fileID: 1396817074}
-  - component: {fileID: 1396817084}
-  m_Layer: 5
-  m_Name: Button (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1396817072
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1670037177}
-  - {fileID: 1537004589}
-  m_Father: {fileID: 424754537}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -505.99997, y: 450}
-  m_SizeDelta: {x: 128, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1396817074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Primal Roar
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: e6e26bc2f6011da488f4e824601974cd, type: 3}
-  skillType: 1
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1396817075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Inner Beast
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 2f0fedd172ffbf244a3446254fe4051d, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1396817076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Call of the Wild Hawk
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 02729398dccebcc4e9ac8bc59217f19d, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 1
-  summon:
-  - {fileID: 1537004591}
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1396817077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Call of the Wild Boar
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: f389ded8175e7a74588b0713e47240db, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 1
-  summon:
-  - {fileID: 1670037178}
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1396817078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Wild Axes
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: a9b1dcf5fb760ad4da9d0b7c7927358f, type: 3}
-  skillType: 4
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 1
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1396817079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313ce818b3a24943916bf0f70776ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Beastmaster
-  generalElement: 0
-  typeAttack: 0
-  weapon: 2
-  weaponType: 2
-  attackElement: 0
-  skills:
-  - {fileID: 1396817078}
-  - {fileID: 1396817077}
-  - {fileID: 1396817076}
-  - {fileID: 1396817075}
-  - {fileID: 1396817074}
-  nonCombatSkills:
-  - {fileID: 1396817084}
-  attribute: 3
-  multiverse: 0
---- !u!114 &1396817080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc0bc8ed0be5534e88893a9d0596a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1396817081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1616897712}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1396817080}
-        m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: heroScreen
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1396817082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fffe25941e2b7564cb39d8d74cccc6f9, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1396817083
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_CullTransparentMesh: 1
---- !u!114 &1396817084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396817071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: 
-  descSkill: 
-  iconSkill: {fileID: 0}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
 --- !u!1 &1412950536
 GameObject:
   m_ObjectHideFlags: 0
@@ -6062,6 +5379,7 @@ GameObject:
   - component: {fileID: 1480233613}
   - component: {fileID: 1480233612}
   - component: {fileID: 1480233611}
+  - component: {fileID: 1480233614}
   m_Layer: 0
   m_Name: HeroScreenCamera
   m_TagString: MainCamera
@@ -6135,6 +5453,39 @@ Transform:
   m_Father: {fileID: 433600861}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480233614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480233610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1525529712
 GameObject:
   m_ObjectHideFlags: 0
@@ -6218,90 +5569,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1537004588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537004589}
-  - component: {fileID: 1537004591}
-  - component: {fileID: 1537004590}
-  m_Layer: 5
-  m_Name: Hawk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1537004589
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537004588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1396817072}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1537004590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537004588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Invisible
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 72e392a4c6d70924f91ffbe6a8d43f30, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1537004591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537004588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b8978446ebcbf4e825a9c71699739e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Hawk
-  generalElement: 0
-  typeAttack: 0
-  weapon: 1
-  weaponType: 1
-  attackElement: 0
-  skills:
-  - {fileID: 1537004590}
-  nonCombatSkills: []
-  nameSummoner: 
 --- !u!1 &1544755975
 GameObject:
   m_ObjectHideFlags: 0
@@ -6692,389 +5959,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581897584}
   m_CullTransparentMesh: 1
---- !u!1 &1616897709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1616897710}
-  - component: {fileID: 1616897713}
-  - component: {fileID: 1616897712}
-  - component: {fileID: 1616897711}
-  - component: {fileID: 1616897714}
-  - component: {fileID: 1616897715}
-  - component: {fileID: 1616897719}
-  - component: {fileID: 1616897718}
-  - component: {fileID: 1616897717}
-  - component: {fileID: 1616897716}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1616897710
+--- !u!224 &1616897710 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+  m_PrefabInstance: {fileID: 5248868229561933850}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 424754537}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -804, y: 450}
-  m_SizeDelta: {x: 128, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1616897711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: -1
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1616897712}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1616897714}
-        m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: heroScreen
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1616897712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ff3e9bd43929df94fbfd6e61621c08cd, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1616897713
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_CullTransparentMesh: 1
---- !u!114 &1616897714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc0bc8ed0be5534e88893a9d0596a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1616897715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313ce818b3a24943916bf0f70776ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Abaddon
-  generalElement: 3
-  typeAttack: 0
-  weapon: 0
-  weaponType: 0
-  attackElement: 1
-  skills:
-  - {fileID: 1616897719}
-  - {fileID: 1616897718}
-  - {fileID: 1616897717}
-  - {fileID: 1616897716}
-  nonCombatSkills: []
-  attribute: 3
-  multiverse: 0
---- !u!114 &1616897716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Borrowed Time
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 015267f97eb420b478e8d6afbf6687cf, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1616897717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Curse of Avernus
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 16cdb54aca10ea84989fffda577901fe, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1616897718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Aphotic Shield
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: f51eb250275be954191c1ed12485b9ee, type: 3}
-  skillType: 1
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 3
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1616897719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616897709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Mist Coil
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: c5680d1208d086448a1af0f52a4759ba, type: 3}
-  skillType: 1
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 3
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!1 &1670037176
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1670037177}
-  - component: {fileID: 1670037178}
-  - component: {fileID: 1670037179}
-  - component: {fileID: 1670037180}
-  m_Layer: 5
-  m_Name: Boar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1670037177
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670037176}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1396817072}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1670037178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670037176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b8978446ebcbf4e825a9c71699739e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Boar
-  generalElement: 4
-  typeAttack: 1
-  weapon: 3
-  weaponType: 1
-  attackElement: 4
-  skills:
-  - {fileID: 1670037179}
-  nonCombatSkills:
-  - {fileID: 1670037180}
-  nameSummoner: 
---- !u!114 &1670037179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670037176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Poison
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: b54e177f83220f24290ed54a7db83c99, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 4
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1670037180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670037176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: 
-  descSkill: 
-  iconSkill: {fileID: 0}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
 --- !u!1 &1683823173
 GameObject:
   m_ObjectHideFlags: 0
@@ -7857,552 +6746,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1814485788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1814485789}
-  - component: {fileID: 1814485798}
-  - component: {fileID: 1814485797}
-  - component: {fileID: 1814485796}
-  - component: {fileID: 1814485795}
-  - component: {fileID: 1814485794}
-  - component: {fileID: 1814485793}
-  - component: {fileID: 1814485792}
-  - component: {fileID: 1814485791}
-  - component: {fileID: 1814485790}
-  m_Layer: 5
-  m_Name: Button (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1814485789
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 424754537}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.99995, y: 450}
-  m_SizeDelta: {x: 128, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1814485790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Mana Void
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 487f84659614d0b47886c062b81c1e9a, type: 3}
-  skillType: 4
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1814485791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Counterspell
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 507b0e932f0429e4eb7dbfabe3158e9d, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1814485792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Blink
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 58b0318acf8f7154ba238bdc2d1092d1, type: 3}
-  skillType: 4
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1814485793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Mana Break
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: cee1de6a776ef6e4b8d00b5f33a12e04, type: 3}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 2
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1814485794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313ce818b3a24943916bf0f70776ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Antimage
-  generalElement: 1
-  typeAttack: 0
-  weapon: 4
-  weaponType: 2
-  attackElement: 1
-  skills:
-  - {fileID: 1814485793}
-  - {fileID: 1814485792}
-  - {fileID: 1814485791}
-  - {fileID: 1814485790}
-  nonCombatSkills: []
-  attribute: 1
-  multiverse: 0
---- !u!114 &1814485795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc0bc8ed0be5534e88893a9d0596a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1814485796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1616897712}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1814485795}
-        m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: heroScreen
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1814485797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 334d4a2817f08a840afe5bb6cd6d1eae, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1814485798
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814485788}
-  m_CullTransparentMesh: 1
---- !u!1 &1816835393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1816835394}
-  - component: {fileID: 1816835400}
-  - component: {fileID: 1816835399}
-  - component: {fileID: 1816835398}
-  - component: {fileID: 1816835397}
-  - component: {fileID: 1816835396}
-  - component: {fileID: 1816835395}
-  - component: {fileID: 1816835401}
-  - component: {fileID: 1816835402}
-  - component: {fileID: 1816835403}
-  m_Layer: 5
-  m_Name: Button (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1816835394
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 424754537}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354.99994, y: 450}
-  m_SizeDelta: {x: 128, y: 72}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1816835395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Cold Feet
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 7abc1b9d83dcc164fbf7673a58f8c2ae, type: 3}
-  skillType: 1
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 2
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1816835396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313ce818b3a24943916bf0f70776ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureName: Ancient Apparation
-  generalElement: 2
-  typeAttack: 1
-  weapon: 3
-  weaponType: 1
-  attackElement: 2
-  skills:
-  - {fileID: 1816835395}
-  - {fileID: 1816835401}
-  - {fileID: 1816835402}
-  - {fileID: 1816835403}
-  nonCombatSkills: []
-  attribute: 2
-  multiverse: 0
---- !u!114 &1816835397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc0bc8ed0be5534e88893a9d0596a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1816835398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1616897712}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1816835397}
-        m_TargetAssemblyTypeName: SwitchButton, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: heroScreen
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1816835399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0267fa61fb6c0b6499379489b5d6a2bb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1816835400
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_CullTransparentMesh: 1
---- !u!114 &1816835401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Ice Vortex
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: e8d72e56af810db41b37aea9fb3982f8, type: 3}
-  skillType: 4
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1816835402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Chilling Touch
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 8f6e94f27ad96cf4c94575ffeb41845c, type: 3}
-  skillType: 2
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
---- !u!114 &1816835403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816835393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: Ice Blast
-  descSkill: 
-  iconSkill: {fileID: 21300000, guid: 8b94bd8324c20174b8dd808b1e2dbc38, type: 3}
-  skillType: 4
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 1
-  damageType: 2
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
 --- !u!1 &1833935732
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,7 +7594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00029118438}
+  m_AnchoredPosition: {x: 0, y: -0.00007247925}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2040938098
@@ -9431,198 +7774,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091473255}
   m_CullTransparentMesh: 1
---- !u!1 &2093071951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2093071952}
-  - component: {fileID: 2093071955}
-  - component: {fileID: 2093071954}
-  - component: {fileID: 2093071953}
-  - component: {fileID: 2093071956}
-  - component: {fileID: 2093071957}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2093071952
+--- !u!224 &2093071952 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+  m_PrefabInstance: {fileID: 3027547432169611173}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 110323372}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.98248154}
-  m_AnchorMax: {x: 0, y: 0.98248154}
-  m_AnchoredPosition: {x: 189, y: -99}
-  m_SizeDelta: {x: 90, y: 64}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2093071953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2093071954}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2093071956}
-        m_TargetAssemblyTypeName: Artifact, Assembly-CSharp
-        m_MethodName: ClickOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2093071954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59ff7501cb7156c45a26b6fb31173b2e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2093071955
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_CullTransparentMesh: 1
---- !u!114 &2093071956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d9f154bbf6e16d43ae086fbb4b41772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 59ff7501cb7156c45a26b6fb31173b2e, type: 3}
-  itemName: Bloodthorn
-  itemDesc: '1
-
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    7'
-  itemType: 1
-  itemSlot: 0
-  itemSkills:
-  - {fileID: 2093071957}
-  artifactPrefab: {fileID: 2136639834762923830, guid: f1abb895e7e3a6d4199cdffb5943f37e, type: 3}
-  canvasForArtDesc: {fileID: 371408369}
---- !u!114 &2093071957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093071951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5ed0c2a1690e949a8c46278f12f934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameSkill: 
-  descSkill: 
-  iconSkill: {fileID: 0}
-  skillType: 0
-  IsHasSomeSkills: 0
-  otherSkills: []
-  IsHasSummons: 0
-  summon: []
-  IsDamaging: 0
-  damageType: 0
-  panelPrefab: {fileID: 0}
-  canvasForSkillPanel: {fileID: 0}
 --- !u!1 &2099492217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9997,3 +8153,209 @@ Transform:
   m_Father: {fileID: 981016177}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3027547432169611173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 110323372}
+    m_Modifications:
+    - target: {fileID: 3027547431578116586, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116586, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116593, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: canvasForArtDesc
+      value: 
+      objectReference: {fileID: 371408369}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.98248154
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.98248154
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027547431578116597, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+--- !u!1001 &5248868229561933850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 424754537}
+    m_Modifications:
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -849
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 447
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846900, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846903, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248868229018846903, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}

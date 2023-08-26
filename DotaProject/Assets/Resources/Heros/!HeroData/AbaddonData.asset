@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: AbaddonData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: ff3e9bd43929df94fbfd6e61621c08cd, type: 3}
+  concept: {fileID: 21300000, guid: e72f24e04ddb39047bd383ebadb276c6, type: 3}
+  entityName: Abaddon
+  generalElement: 3
+  typeAttack: 0
+  weapon: 0
+  weaponType: 0
+  attackElement: 3
+  skills:
+  - {fileID: 11400000, guid: 37aa88c4ad6115d498c5eb07db9f6042, type: 2}
+  - {fileID: 11400000, guid: dcf092574c7fcbe46ae0e1ee2624a862, type: 2}
+  - {fileID: 11400000, guid: b9a89943ec85af54497fb8203541d7d0, type: 2}
+  - {fileID: 11400000, guid: a50533cc44da78a46beaa567921d870b, type: 2}
+  nonCombatSkills: []
+  attribute: 3
+  multiverse: 0

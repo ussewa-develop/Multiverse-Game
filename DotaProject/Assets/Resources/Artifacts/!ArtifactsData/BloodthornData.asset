@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af16332778962fe4cbb9f12172ce1a3e, type: 3}
+  m_Name: BloodthornData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 59ff7501cb7156c45a26b6fb31173b2e, type: 3}
+  itemName: Bloodthorn
+  itemDesc: 
+  itemType: 1
+  itemSlot: 0
+  itemSkills:
+  - {fileID: 11400000, guid: 4ac334c01eb3f304b930a2a835b46e8d, type: 2}
+  - {fileID: 11400000, guid: 09c98bc1788898c4f8016787d727c550, type: 2}
