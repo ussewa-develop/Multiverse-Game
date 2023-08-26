@@ -8,6 +8,7 @@ public class HeroGate : MonoBehaviour
     public void Instantiate(HeroSO hero)
     {
         this.hero = hero;
+        gameObject.name = hero.entityName;
         GetComponent<Image>().sprite = hero.icon;
     }
 }
