@@ -52,7 +52,7 @@ public abstract class EntityScreen : MonoBehaviour
 
         elementAttackText.text = Localizator.Localize("ElementOfAttack") + IconLoader.LoadSmile(entity.attackElement) + Localizator.Localize(entity.attackElement.ToString());
 
-        nonCombatSkillsText.gameObject.SetActive(true);
+        nonCombatSkillsText.gameObject.SetActive(false);
 
         for (int skillId = 0; skillId < entity.skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
         {
@@ -61,9 +61,9 @@ public abstract class EntityScreen : MonoBehaviour
 
         yCoordinate -= 300;
 
-        if(entity.nonCombatSkills != null)
+        if(entity.nonCombatSkills.Length > 0)
         {
-            nonCombatSkillsText.gameObject.SetActive(false);
+            nonCombatSkillsText.gameObject.SetActive(true);
             for (int skillId = 0; skillId < entity.nonCombatSkills.Length; skillId++) //создаю иконки не боевых способностей в зависимости от их количества
             {
                 CreateSpell(entity.nonCombatSkills, skillId, yCoordinate, parent, canvas);

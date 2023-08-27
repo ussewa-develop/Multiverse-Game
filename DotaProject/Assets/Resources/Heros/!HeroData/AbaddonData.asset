@@ -25,6 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dcf092574c7fcbe46ae0e1ee2624a862, type: 2}
   - {fileID: 11400000, guid: b9a89943ec85af54497fb8203541d7d0, type: 2}
   - {fileID: 11400000, guid: a50533cc44da78a46beaa567921d870b, type: 2}
-  nonCombatSkills: []
+  nonCombatSkills:
+  - {fileID: 11400000, guid: baf85150eefb1ec4c9c346305bec95a8, type: 2}
   attribute: 3
   multiverse: 0
