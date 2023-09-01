@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Wallet
 {
     public static Action<int> coinsChangedEvent;
-    private static int coins = 0;
+    private static int coins = 10000;
     public static int Coins 
     { 
         get
@@ -30,5 +30,4 @@ public static class Wallet
     {
         Coins+=value;
     }
-
 }

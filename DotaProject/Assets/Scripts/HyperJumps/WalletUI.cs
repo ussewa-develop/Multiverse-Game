@@ -11,6 +11,7 @@ public class WalletUI : MonoBehaviour
     {
         Wallet.coinsChangedEvent += ChangeText;
         _thisText = GetComponent<TextMeshProUGUI>();
+        _thisText.text = Wallet.Coins.ToString();
     }
 
     private void OnDestroy()
