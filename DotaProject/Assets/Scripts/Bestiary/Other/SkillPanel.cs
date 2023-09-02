@@ -18,6 +18,36 @@ public class SkillPanel : MonoBehaviour
     public TextMeshProUGUI cooldownText;
     public TextMeshProUGUI manaText;
     public TextMeshProUGUI actionPointText;
+    [SerializeField] GameObject downStats;
+    [Space]
+    [Header("\t\t\tValues")]
+    [SerializeField] float ratio = 40f;
+    [SerializeField] float ratioForDelta = 43.5f;
+    [SerializeField] float downStatsY = 322f;
+
+    private void Start()
+    {
+        EventController.SwitchMenu += Destroy;
+
+        float delta = skillDescText.preferredHeight/ratioForDelta;
+        Vector2 deltaVector = new Vector2(0, delta * ratio);
+
+        background.GetComponent<RectTransform>().sizeDelta += deltaVector;
+        Debug.Log(delta);
+
+        downStats.transform.localPosition = new Vector3(downStats.transform.localPosition.x, downStatsY);
+        downStats.transform.localPosition -= new Vector3(deltaVector.x, deltaVector.y);
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        EventController.SwitchMenu -= Destroy;
+    }
 
 
 
@@ -64,18 +94,5 @@ public class SkillPanel : MonoBehaviour
     }
     #endregion
 
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
-    private void Start()
-    {
-        EventController.SwitchMenu += Destroy;
-    }
-
-    private void OnDestroy()
-    {
-        EventController.SwitchMenu -= Destroy;
-    }
+ 
 }

@@ -16,6 +16,9 @@ MonoBehaviour:
   skillName: Borrowed Time
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 015267f97eb420b478e8d6afbf6687cf, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
   IsHasSomeSkills: 0
   otherSkills: []
   IsHasSummons: 0
