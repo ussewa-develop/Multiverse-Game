@@ -8,11 +8,11 @@ public class EventController : MonoBehaviour
     public static Action SwitchMenu; //эвент, который срабатывает, когда мен€етс€ окно
     public static Action DestroyOtherSkills; //эвент, который срабатывает, когда нужно удалить другие скиллы в экране геро€
 
-    public static int yForSummonsContentfield = -1500;//  }-\
+    public static int yForSummonsContentfield = -1800;//  }-\
     //                                                      | - должны быть одинаковые 
-    public static int standartY = -1500;//                }-/
+    public static int standartY = -1800;//                }-/
 
-    public static int deltaForY = 1450; // разница дл€ Y
+    public static int deltaForY = 1600; // разница дл€ Y
 
     public static void SetStandartY()
     {

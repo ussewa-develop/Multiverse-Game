@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: CorrosiveWeaponryData
   m_EditorClassIdentifier: 
-  skillType: 0
+  skillType: 1
   skillName: Corrosive Weaponry
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: a25396f91306e7947bd1db8877353dce, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
   IsHasSomeSkills: 0
   otherSkills: []
   IsHasSummons: 0

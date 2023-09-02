@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: UnstableConcoctionData
   m_EditorClassIdentifier: 
-  skillType: 2
+  skillType: 3
   skillName: Unstable Concoction
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 288bbc200bddda3438c9ba34e069304c, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
   IsHasSomeSkills: 1
   otherSkills:
   - {fileID: 11400000, guid: e5c6fefd8d1678b448c7ac6742367d2e, type: 2}

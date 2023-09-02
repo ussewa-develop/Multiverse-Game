@@ -13,28 +13,39 @@ public abstract class EntityScreen : MonoBehaviour
     [SerializeField] Image entityConceptSprite;
     [SerializeField] TextMeshProUGUI heroNameText;
     [SerializeField] TextMeshProUGUI elementEntityText;
+    [SerializeField] TextMeshProUGUI combatSkillText;
     [SerializeField] TextMeshProUGUI nonCombatSkillsText;
-    [SerializeField] public Image iconAbillityPrefab;
-    [SerializeField] public RectTransform summonContentPrefab; 
     [SerializeField] public RectTransform contentField;
-    [SerializeField] public Canvas canvasForSpells;
+    [Space]
     [Header("\t\tAttack/Weapon")]
     [SerializeField] TextMeshProUGUI typeAttackText;
     [SerializeField] TextMeshProUGUI elementAttackText;
     [SerializeField] TextMeshProUGUI weaponText;
     [SerializeField] TextMeshProUGUI weaponTypeText;
     [SerializeField] Image attackIcon;
+    [Space]
+    [Header("\t\t\tPrefabs")]
+    [SerializeField] public Canvas canvasForSpells;
+    [SerializeField] public RectTransform summonContentPrefab; 
+    [SerializeField] public Image iconAbillityPrefab;
+    [SerializeField] SkillSO emptySkill;
+
 
     private void Start()
     {
         EventController.SwitchMenu += SetNormalScale;
     }
 
-    public void CreateEntity(EntitySO entity, Transform parent, float yCoordinate)
+    public Canvas CreateCanvasForSpells(Transform parent)
+    {
+        return Instantiate(canvasForSpells, parent);
+    }
+
+    public void CreateEntity(EntitySO entity, Transform parent)
     {
         //
         // Создаем канвас для нормального отображения панелек способностей
-        Canvas canvas = Instantiate(canvasForSpells, parent);
+        Canvas canvas = CreateCanvasForSpells(parent);
         //
 
         entityIcon.sprite = entity.icon;
@@ -52,60 +63,66 @@ public abstract class EntityScreen : MonoBehaviour
 
         elementAttackText.text = Localizator.Localize("ElementOfAttack") + IconLoader.LoadSmile(entity.attackElement) + Localizator.Localize(entity.attackElement.ToString());
 
-        nonCombatSkillsText.gameObject.SetActive(false);
+        CreateSpells(combatSkillText.transform, entity.skills, parent, canvas); //создание обычных скиллов
 
-        for (int skillId = 0; skillId < entity.skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
-        {
-            CreateSpell(entity.skills, skillId, yCoordinate, parent, canvas);
-        }
+        CreateSpells(nonCombatSkillsText.transform, entity.nonCombatSkills, parent, canvas);//создание небоевых скиллов 
 
-        yCoordinate -= 300;
 
-        if(entity.nonCombatSkills.Length > 0)
-        {
-            nonCombatSkillsText.gameObject.SetActive(true);
-            for (int skillId = 0; skillId < entity.nonCombatSkills.Length; skillId++) //создаю иконки не боевых способностей в зависимости от их количества
-            {
-                CreateSpell(entity.nonCombatSkills, skillId, yCoordinate, parent, canvas);
-            }
-        }
     }
 
     public virtual void CreateHero(HeroSO hero)
     {
-        float posY = -1117f;
-        CreateEntity(hero, contentField.transform, posY);        
+        CreateEntity(hero, contentField.transform);
     }
 
-    public void CreateSpell(SkillSO[] skills, int skillId, float yCoordinate, Transform parent, Canvas canvas) //создаем иконки способностей героя
+    public void CreateSpells(Transform position, SkillSO[] skills, Transform parent, Canvas canvas)
+    {
+        float offset = 150f;
+        float yCoordinate = position.localPosition.y - offset;
+
+        if(skills != null && skills.Length>0)
+        {
+            for (int skillId = 0; skillId < skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
+            {
+                CreateSpell(skills[skillId], skillId, skills.Length, yCoordinate, parent, canvas);
+            }
+        }
+        else
+        {
+            CreateSpell(emptySkill, 0, 1, yCoordinate, parent, canvas);
+        }
+    }
+
+
+    public void CreateSpell(SkillSO skill, int skillId, int skillsCount ,float yForSkill, Transform parent, Canvas canvas) //создаем иконки способностей героя
     {
         Image gate;
         gate = Instantiate(iconAbillityPrefab, gameObject.transform);
         gate.rectTransform.SetParent(parent, false);
-        gate.GetComponent<SkillGate>().skill = skills[skillId];
+        gate.GetComponent<SkillGate>().skill = skill;
         gate.GetComponent<SkillGate>().canvasForSkillPanel = canvas;
-        if(skills[skillId].IsHasSummons)
+        if(skill.IsHasSummons)
         {
             List<SummonSO> summons = new List<SummonSO>();
-            summons = skills[skillId].summon;
+            summons = skill.summon;
             foreach (var summon in summons)
             {
                 CreateSummon(summon);
             }
         }
         gate.sprite = gate.GetComponent<SkillGate>().skill.skillIcon;
-        gate.transform.localPosition = CalcCoordForSpell(skills.Length, skillId, yCoordinate);
+        gate.transform.localPosition = CalcCoordForSpell(skillsCount, skillId, yForSkill);
     }
+
 
     private void CreateSummon(SummonSO summon) 
     {
-        float posY = -1000;
         RectTransform summonContent;
         summonContent = Instantiate(summonContentPrefab, contentField);
-        contentField.sizeDelta += new Vector2(0, 1300);
+        contentField.sizeDelta += new Vector2(0, 1500);
         summonContent.transform.localPosition = new Vector2(0, EventController.yForSummonsContentfield);
 
-        summonContent.GetComponent<SummonScreen>().CreateEntity(summon,summonContent,posY);
+        summonContent.GetComponent<SummonScreen>().CreateEntity(summon,summonContent);
 
         EventController.yForSummonsContentfield -= EventController.deltaForY; // координата Y для выставления позиции сумоннов
     }

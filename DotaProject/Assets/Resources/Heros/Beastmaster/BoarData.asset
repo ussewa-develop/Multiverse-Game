@@ -23,4 +23,3 @@ MonoBehaviour:
   skills:
   - {fileID: 11400000, guid: c8a184a38d7f98d4a85dc6643934039f, type: 2}
   nonCombatSkills: []
-  summoner: {fileID: 0}

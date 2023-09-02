@@ -58,10 +58,19 @@ public class SkillPanel : MonoBehaviour
         skillNameText.text = skill.skillName;
         skillDescText.text = skill.skillDesc;
         skillIcon.sprite = skill.skillIcon;
-        skillTypeText.text = Localizator.Localize("Ability") + Localizator.Localize(skill.skillType.ToString());
         skillCooldownText.text = skill.cooldown + " " + Localizator.Localize("Turn");
         skillManaText.text = Localizator.Localize("Mana") + ": " + skill.manaCost;
         skillActionPointText.text = Localizator.Localize("AP") + ": " + skill.actionPointCost;
+
+        if(skill.skillType == SkillType.None)
+        {
+            skillTypeText.gameObject.SetActive(false);
+        }
+        else
+        {
+            skillTypeText.text = Localizator.Localize("Ability") + Localizator.Localize(skill.skillType.ToString());
+        }
+
         if (skill.IsHasSomeSkills)
         {
             toolTip.SetActive(true);

@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: IceBlastData
   m_EditorClassIdentifier: 
-  skillType: 3
+  skillType: 4
   skillName: Ice Blast
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 8b94bd8324c20174b8dd808b1e2dbc38, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
   IsHasSomeSkills: 0
   otherSkills: []
   IsHasSummons: 0

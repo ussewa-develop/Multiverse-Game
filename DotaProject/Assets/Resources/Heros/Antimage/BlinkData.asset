@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
-  m_Name: SkillData 3
+  m_Name: BlinkData
   m_EditorClassIdentifier: 
-  skillType: 1
-  skillName: Mana Void
+  skillType: 4
+  skillName: Blink
   skillDesc: 
-  skillIcon: {fileID: 21300000, guid: 487f84659614d0b47886c062b81c1e9a, type: 3}
+  skillIcon: {fileID: 21300000, guid: 58b0318acf8f7154ba238bdc2d1092d1, type: 3}
   IsHasSomeSkills: 0
   otherSkills: []
   IsHasSummons: 0
   summon: []
-  IsDamaging: 1
+  IsDamaging: 0
   damageType: 0

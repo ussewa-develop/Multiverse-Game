@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
-  m_Name: CallOfTheWildHawkData
+  m_Name: ManaBreakData
   m_EditorClassIdentifier: 
-  skillType: 3
-  skillName: Call of the Wild (Hawk)
+  skillType: 0
+  skillName: Mana break
   skillDesc: 
-  skillIcon: {fileID: 21300000, guid: 72e392a4c6d70924f91ffbe6a8d43f30, type: 3}
-  cooldown: 0
-  manaCost: 0
-  actionPointCost: 0
+  skillIcon: {fileID: 21300000, guid: cee1de6a776ef6e4b8d00b5f33a12e04, type: 3}
   IsHasSomeSkills: 0
   otherSkills: []
-  IsHasSummons: 1
-  summon:
-  - {fileID: 11400000, guid: 3753518c8a5be9c47ba6169b0923ebe7, type: 2}
+  IsHasSummons: 0
+  summon: []
   IsDamaging: 0
   damageType: 0

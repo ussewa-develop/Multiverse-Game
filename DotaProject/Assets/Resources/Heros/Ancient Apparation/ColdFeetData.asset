@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: ColdFeetData
   m_EditorClassIdentifier: 
-  skillType: 1
+  skillType: 2
   skillName: Cold Feet
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 7abc1b9d83dcc164fbf7673a58f8c2ae, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
   IsHasSomeSkills: 0
   otherSkills: []
   IsHasSummons: 0

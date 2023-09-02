@@ -66,6 +66,7 @@ MonoBehaviour:
   entityConceptSprite: {fileID: 3979329098437436257}
   heroNameText: {fileID: 3979329097941606176}
   elementEntityText: {fileID: 3979329097666686737}
+  combatSkillText: {fileID: 3979329098448032008}
   nonCombatSkillsText: {fileID: 2693199827578217316}
   iconAbillityPrefab: {fileID: 3706438725068202694, guid: 6852a873066048147aad43d8d8921cc8, type: 3}
   summonContentPrefab: {fileID: 3979329097151372014}

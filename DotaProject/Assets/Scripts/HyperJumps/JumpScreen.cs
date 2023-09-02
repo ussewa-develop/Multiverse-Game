@@ -22,6 +22,6 @@ public class JumpScreen : MonoBehaviour
     {
         heroName.text = hero.entityName;
         heroConcept.sprite = hero.concept;
-        Debug.Log(hero);
+        hero.ConstLevel += 1;
     }
 }

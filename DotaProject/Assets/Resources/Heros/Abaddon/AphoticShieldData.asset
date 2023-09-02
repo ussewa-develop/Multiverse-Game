@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: AphoticShieldData
   m_EditorClassIdentifier: 
-  skillType: 1
+  skillType: 2
   skillName: Aphotic Shield
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: f51eb250275be954191c1ed12485b9ee, type: 3}

@@ -43,4 +43,5 @@ public class EntitySO : ScriptableObject
     public Element attackElement;
     public SkillSO[] skills; // battle skills
     public SkillSO[] nonCombatSkills; // race/non battle skills
+    public SkillSO[] talanties;
 }

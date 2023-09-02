@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum SkillType
 {
+    None,
     Passive,
     Unit_Target,
     No_Target,
