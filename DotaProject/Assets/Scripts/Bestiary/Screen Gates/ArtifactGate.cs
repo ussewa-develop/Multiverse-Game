@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -41,7 +42,7 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             {
                 //ставим коорды самого контент филда и сразу расширяем контентфилд на количество скиллов
                 //
-                posPrevSkill = panel.contentField.transform.position; 
+                posPrevSkill = panel.contentField.transform.position;
                 panel.contentField.sizeDelta += new Vector2(0f, 600f * artifact.itemSkills.Count);
                 //
                 isFirstSkill = false;

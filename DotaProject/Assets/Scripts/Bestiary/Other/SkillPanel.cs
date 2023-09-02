@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class SkillPanel : MonoBehaviour
 {
+    [Header("\t\t\tSkill values")]
     public TextMeshProUGUI skillNameText;
     public TextMeshProUGUI skillTypeText;
     public TextMeshProUGUI skillDescText;
@@ -11,13 +12,12 @@ public class SkillPanel : MonoBehaviour
     public TextMeshProUGUI skillCooldownText;
     public TextMeshProUGUI skillManaText;
     public TextMeshProUGUI skillActionPointText;
+    [SerializeField] TextMeshProUGUI skillDamageTypeText;
+    [Space]
+    [Header("\t\t\tOther")]
     public GameObject background;
     public GameObject toolTip;
     public TextMeshProUGUI textTip;
-    public TextMeshProUGUI damageTypeText;
-    public TextMeshProUGUI cooldownText;
-    public TextMeshProUGUI manaText;
-    public TextMeshProUGUI actionPointText;
     [SerializeField] GameObject downStats;
     [Space]
     [Header("\t\t\tValues")]
@@ -28,20 +28,18 @@ public class SkillPanel : MonoBehaviour
     private void Start()
     {
         EventController.SwitchMenu += Destroy;
+        SetScale();
+    }
 
-        float delta = skillDescText.preferredHeight/ratioForDelta;
+    private void SetScale()
+    {
+        float delta = skillDescText.preferredHeight / ratioForDelta;
         Vector2 deltaVector = new Vector2(0, delta * ratio);
 
         background.GetComponent<RectTransform>().sizeDelta += deltaVector;
-        Debug.Log(delta);
 
         downStats.transform.localPosition = new Vector3(downStats.transform.localPosition.x, downStatsY);
         downStats.transform.localPosition -= new Vector3(deltaVector.x, deltaVector.y);
-    }
-
-    public void Destroy()
-    {
-        Destroy(gameObject);
     }
 
     private void OnDestroy()
@@ -49,6 +47,10 @@ public class SkillPanel : MonoBehaviour
         EventController.SwitchMenu -= Destroy;
     }
 
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 
 
     public void SetSkillInPanel(SkillSO skill, Transform icon) //установка значений скилла в панель
@@ -57,18 +59,18 @@ public class SkillPanel : MonoBehaviour
         skillDescText.text = skill.skillDesc;
         skillIcon.sprite = skill.skillIcon;
         skillTypeText.text = Localizator.Localize("Ability") + Localizator.Localize(skill.skillType.ToString());
-        cooldownText.text = skill.cooldown + " " + Localizator.Localize("Turn");
-        manaText.text = Localizator.Localize("Mana") + ": " + skill.manaCost;
-        actionPointText.text = Localizator.Localize("AP") + ": " + skill.actionPointCost;
+        skillCooldownText.text = skill.cooldown + " " + Localizator.Localize("Turn");
+        skillManaText.text = Localizator.Localize("Mana") + ": " + skill.manaCost;
+        skillActionPointText.text = Localizator.Localize("AP") + ": " + skill.actionPointCost;
         if (skill.IsHasSomeSkills)
         {
             toolTip.SetActive(true);
         }
         if (skill.IsDamaging)
         {
-            damageTypeText.gameObject.SetActive(true);
+            skillDamageTypeText.gameObject.SetActive(true);
 
-            damageTypeText.text = Localizator.Localize("DamageType") +
+            skillDamageTypeText.text = Localizator.Localize("DamageType") +
                 IconLoader.LoadSmile(skill.damageType) + Localizator.Localize(skill.damageType.ToString());
         }
         transform.position = icon.position - new Vector3(0, 3.5f, 0);

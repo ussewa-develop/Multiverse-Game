@@ -361,13 +361,10 @@ MonoBehaviour:
   skillCooldownText: {fileID: 1435671258538212033}
   skillManaText: {fileID: 4322657390654934857}
   skillActionPointText: {fileID: 8135546760117195462}
+  skillDamageTypeText: {fileID: 7643312803932472144}
   background: {fileID: 2118638740622804265}
   toolTip: {fileID: 166494777686617738}
   textTip: {fileID: 1030613258504819495}
-  damageTypeText: {fileID: 7643312803932472144}
-  cooldownText: {fileID: 1435671258538212033}
-  manaText: {fileID: 4322657390654934857}
-  actionPointText: {fileID: 8135546760117195462}
   downStats: {fileID: 2555680990620123511}
   ratio: 40
   ratioForDelta: 43.5
