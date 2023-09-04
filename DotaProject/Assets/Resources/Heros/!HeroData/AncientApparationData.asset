@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 0267fa61fb6c0b6499379489b5d6a2bb, type: 3}
   concept: {fileID: 21300000, guid: 97dc50ee746f7744e8f57fe8708b120f, type: 3}
   entityName: Ancient Apparation
-  generalElement: 2
+  race: 4
   typeAttack: 1
   weapon: 3
   weaponType: 1
@@ -26,5 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 817b756890429ef4488f86686dbada0c, type: 2}
   - {fileID: 11400000, guid: 856ff86748cb5d5449f9897b6f848014, type: 2}
   nonCombatSkills: []
+  talanties: []
   attribute: 2
   multiverse: 0
+  constLevel: 0

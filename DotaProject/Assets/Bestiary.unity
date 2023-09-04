@@ -1141,7 +1141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.359985, y: -38.880005}
+  m_AnchoredPosition: {x: -33.359863, y: -38.880005}
   m_SizeDelta: {x: 67, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274887754
@@ -4280,7 +4280,7 @@ GameObject:
   - component: {fileID: 1138484299}
   - component: {fileID: 1138484298}
   m_Layer: 5
-  m_Name: ElementHeroText
+  m_Name: RaceHeroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Element
+  m_text: Race
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d3dcf538a1a28c4ba8f5277e3a38336, type: 2}
   m_sharedMaterial: {fileID: 233902295917548264, guid: 5d3dcf538a1a28c4ba8f5277e3a38336, type: 2}
@@ -5855,7 +5855,7 @@ MonoBehaviour:
   entityIcon: {fileID: 1347266444}
   entityConceptSprite: {fileID: 311510161}
   heroNameText: {fileID: 1766384436}
-  elementEntityText: {fileID: 1138484298}
+  raceEntityText: {fileID: 1138484298}
   combatSkillText: {fileID: 2099492219}
   nonCombatSkillsText: {fileID: 348463840}
   contentField: {fileID: 63841826}
@@ -5868,9 +5868,9 @@ MonoBehaviour:
   summonContentPrefab: {fileID: 3979329097151372014, guid: 2e0cc214974500547bfe1c4c7c68312f, type: 3}
   iconAbillityPrefab: {fileID: 3706438725068202694, guid: 6852a873066048147aad43d8d8921cc8, type: 3}
   emptySkill: {fileID: 11400000, guid: 84cd12556cbec464f930a6d85c9d0056, type: 2}
+  talantiesText: {fileID: 434651084}
   attributeIcon: {fileID: 1054276395}
   attributeText: {fileID: 977702201}
-  talantiesText: {fileID: 434651084}
 --- !u!1 &1562196950
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,7 +6167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.359985, y: -38.880005}
+  m_AnchoredPosition: {x: -33.359863, y: -38.880005}
   m_SizeDelta: {x: 67, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683823175

@@ -10,19 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
-  m_Name: CallOfTheWildHawkData
+  m_Name: Test
   m_EditorClassIdentifier: 
-  skillType: 3
-  skillName: Call of the Wild (Hawk)
-  skillDesc: 
-  skillIcon: {fileID: 21300000, guid: 33c9f58d8e3a0c14384ae0e8e1ca4599, type: 3}
+  skillType: 0
+  skillName: 
+  skillDesc: '1
+
+    1
+
+    1
+
+    1
+
+    1
+
+    1
+
+'
+  skillIcon: {fileID: 21300000, guid: d02e7b82d88543d47bf051c8288c80ec, type: 3}
   cooldown: 0
   manaCost: 0
   actionPointCost: 0
   IsHasSomeSkills: 0
   otherSkills: []
-  IsHasSummons: 1
-  summon:
-  - {fileID: 11400000, guid: 3753518c8a5be9c47ba6169b0923ebe7, type: 2}
+  IsHasSummons: 0
+  summon: []
   IsDamaging: 0
   damageType: 0

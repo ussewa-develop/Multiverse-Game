@@ -51,4 +51,9 @@ public class IconLoader : MonoBehaviour
     {
         return "<sprite name=" + typeAttack.ToString() + "> ";
     }
+
+    public static string LoadSmile(Race race)
+    {
+        return "<sprite name=" + race.ToString() + "> ";
+    }
 }

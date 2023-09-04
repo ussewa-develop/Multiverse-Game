@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -12,7 +13,7 @@ public abstract class EntityScreen : MonoBehaviour
     [SerializeField] Image entityIcon;
     [SerializeField] Image entityConceptSprite;
     [SerializeField] TextMeshProUGUI heroNameText;
-    [SerializeField] TextMeshProUGUI elementEntityText;
+    [SerializeField] TextMeshProUGUI raceEntityText;
     [SerializeField] TextMeshProUGUI combatSkillText;
     [SerializeField] TextMeshProUGUI nonCombatSkillsText;
     [SerializeField] public RectTransform contentField;
@@ -53,7 +54,7 @@ public abstract class EntityScreen : MonoBehaviour
 
         entityConceptSprite.sprite = entity.concept;
 
-        elementEntityText.text = IconLoader.LoadSmile(entity.generalElement) + Localizator.Localize(entity.generalElement.ToString());
+        raceEntityText.text = IconLoader.LoadSmile(entity.race) + entity.race.ToString();
 
         typeAttackText.text = Localizator.Localize("TypeAttack") + IconLoader.LoadSmile(entity.typeAttack) + Localizator.Localize(entity.typeAttack.ToString());
 
@@ -66,8 +67,6 @@ public abstract class EntityScreen : MonoBehaviour
         CreateSpells(combatSkillText.transform, entity.skills, parent, canvas); //создание обычных скиллов
 
         CreateSpells(nonCombatSkillsText.transform, entity.nonCombatSkills, parent, canvas);//создание небоевых скиллов 
-
-
     }
 
     public virtual void CreateHero(HeroSO hero)
@@ -80,7 +79,7 @@ public abstract class EntityScreen : MonoBehaviour
         float offset = 150f;
         float yCoordinate = position.localPosition.y - offset;
 
-        if(skills != null && skills.Length>0)
+        if(skills is not null && skills.Length > 0)
         {
             for (int skillId = 0; skillId < skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
             {
@@ -101,7 +100,8 @@ public abstract class EntityScreen : MonoBehaviour
         gate.rectTransform.SetParent(parent, false);
         gate.GetComponent<SkillGate>().skill = skill;
         gate.GetComponent<SkillGate>().canvasForSkillPanel = canvas;
-        if(skill.IsHasSummons)
+        gate.GetComponent<SkillGate>().Instantiate();
+        if (skill.IsHasSummons)
         {
             List<SummonSO> summons = new List<SummonSO>();
             summons = skill.summon;

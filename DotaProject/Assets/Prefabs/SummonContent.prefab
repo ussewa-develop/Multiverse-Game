@@ -65,18 +65,19 @@ MonoBehaviour:
   entityIcon: {fileID: 3979329098197430386}
   entityConceptSprite: {fileID: 3979329098437436257}
   heroNameText: {fileID: 3979329097941606176}
-  elementEntityText: {fileID: 3979329097666686737}
+  raceEntityText: {fileID: 3979329097666686737}
   combatSkillText: {fileID: 3979329098448032008}
   nonCombatSkillsText: {fileID: 2693199827578217316}
-  iconAbillityPrefab: {fileID: 3706438725068202694, guid: 6852a873066048147aad43d8d8921cc8, type: 3}
-  summonContentPrefab: {fileID: 3979329097151372014}
   contentField: {fileID: 0}
-  canvasForSpells: {fileID: 6910706917939473790, guid: 97f6810c507989644882bafc878c1ab6, type: 3}
   typeAttackText: {fileID: 3979329098852489862}
   elementAttackText: {fileID: 3979329097347538606}
   weaponText: {fileID: 3979329098909130775}
   weaponTypeText: {fileID: 3979329098038358046}
   attackIcon: {fileID: 3979329099235814918}
+  canvasForSpells: {fileID: 6910706917939473790, guid: 97f6810c507989644882bafc878c1ab6, type: 3}
+  summonContentPrefab: {fileID: 3979329097151372014}
+  iconAbillityPrefab: {fileID: 3706438725068202694, guid: 6852a873066048147aad43d8d8921cc8, type: 3}
+  emptySkill: {fileID: 11400000, guid: 84cd12556cbec464f930a6d85c9d0056, type: 2}
 --- !u!1 &3979329097347538600
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ GameObject:
   - component: {fileID: 3979329097666686736}
   - component: {fileID: 3979329097666686737}
   m_Layer: 5
-  m_Name: ElementSummonText
+  m_Name: RaceSummonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
   m_Name: DarkElementalData
   m_EditorClassIdentifier: 
-  skillType: 0
+  skillType: 1
   skillName: Dark Elemental
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 09c3455d87b0b3b4786d1c171b16cbb1, type: 3}

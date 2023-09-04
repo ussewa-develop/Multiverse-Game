@@ -5,20 +5,22 @@ using UnityEngine.UI;
 public class SkillPanel : MonoBehaviour
 {
     [Header("\t\t\tSkill values")]
-    public TextMeshProUGUI skillNameText;
-    public TextMeshProUGUI skillTypeText;
-    public TextMeshProUGUI skillDescText;
-    public Image skillIcon;
-    public TextMeshProUGUI skillCooldownText;
-    public TextMeshProUGUI skillManaText;
-    public TextMeshProUGUI skillActionPointText;
+    [SerializeField] TextMeshProUGUI skillNameText;
+    [SerializeField] TextMeshProUGUI skillTypeText;
+    [SerializeField] TextMeshProUGUI skillDescText;
+    [SerializeField] Image skillIcon;
+    [SerializeField] TextMeshProUGUI skillCooldownText;
+    [SerializeField] TextMeshProUGUI skillManaText;
+    [SerializeField] TextMeshProUGUI skillActionPointText;
     [SerializeField] TextMeshProUGUI skillDamageTypeText;
     [Space]
     [Header("\t\t\tOther")]
-    public GameObject background;
-    public GameObject toolTip;
-    public TextMeshProUGUI textTip;
+    [SerializeField] GameObject background;
+    public GameObject Background { get => background; }
+
     [SerializeField] GameObject downStats;
+    [SerializeField] GameObject toolTip;
+    [SerializeField] TextMeshProUGUI textTip;
     [Space]
     [Header("\t\t\tValues")]
     [SerializeField] float ratio = 40f;
@@ -27,11 +29,21 @@ public class SkillPanel : MonoBehaviour
 
     private void Start()
     {
+        Instantiate();
+    }
+
+    private void Instantiate()
+    {
         EventController.SwitchMenu += Destroy;
         SetScale();
     }
 
-    private void SetScale()
+    public void SetActiveBackground(bool value)
+    {
+        Background.SetActive(value);
+    }
+
+    public void SetScale()
     {
         float delta = skillDescText.preferredHeight / ratioForDelta;
         Vector2 deltaVector = new Vector2(0, delta * ratio);
@@ -52,8 +64,7 @@ public class SkillPanel : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-    public void SetSkillInPanel(SkillSO skill, Transform icon) //установка значений скилла в панель
+    public void SetSkillInPanel(SkillSO skill) //установка значений скилла в панель
     {
         skillNameText.text = skill.skillName;
         skillDescText.text = skill.skillDesc;
@@ -82,25 +93,24 @@ public class SkillPanel : MonoBehaviour
             skillDamageTypeText.text = Localizator.Localize("DamageType") +
                 IconLoader.LoadSmile(skill.damageType) + Localizator.Localize(skill.damageType.ToString());
         }
-        transform.position = icon.position - new Vector3(0, 3.5f, 0);
     }
 
 
     #region SetSkillInPanel overrides
-    public void SetSkillInPanel(SkillSO skill,Transform icon,Canvas canvas)
+    public void SetSkillInPanel(SkillSO skill,Canvas canvas)
     {
-        SetSkillInPanel(skill,icon);
+        SetSkillInPanel(skill);
         gameObject.transform.SetParent(canvas.transform, false);   
     }
     public void SetSkillInPanel(SkillSO skill,Transform icon, Canvas canvas, float yOffset)
     {
-        SetSkillInPanel(skill,icon,canvas);
+        SetSkillInPanel(skill,canvas);
         transform.position = icon.position - new Vector3(0, yOffset, 0);
     }
     
-    public void SetSkillInPanel(SkillSO skill, Transform icon, Transform parent ,float yOffset)
+    public void SetSkillInPanel(SkillSO skill, Transform parent ,float yOffset)
     {
-        SetSkillInPanel(skill,icon);
+        SetSkillInPanel(skill);
         transform.position = parent.position - new Vector3(0, yOffset, 0);
     }
     #endregion

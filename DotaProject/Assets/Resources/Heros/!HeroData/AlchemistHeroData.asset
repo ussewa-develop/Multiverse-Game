@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: e131a05c3dd583e459edaaf3b280f5ba, type: 3}
   concept: {fileID: 21300000, guid: 575700edcc22e8645b8601d143c8cbb9, type: 3}
   entityName: Alchemist
-  generalElement: 0
+  race: 3
   typeAttack: 0
   weapon: 1
   weaponType: 1
@@ -27,5 +27,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 688a4c12b59574242b3b4c1f2a6d848d, type: 2}
   - {fileID: 11400000, guid: 4d154eeda01778446944134d13836346, type: 2}
   nonCombatSkills: []
+  talanties: []
   attribute: 0
   multiverse: 0
+  constLevel: 0

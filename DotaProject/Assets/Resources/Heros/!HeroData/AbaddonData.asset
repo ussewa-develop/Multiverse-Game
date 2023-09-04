@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: ff3e9bd43929df94fbfd6e61621c08cd, type: 3}
   concept: {fileID: 21300000, guid: e72f24e04ddb39047bd383ebadb276c6, type: 3}
   entityName: Abaddon
-  generalElement: 3
+  race: 4
   typeAttack: 0
   weapon: 0
   weaponType: 0
@@ -27,5 +27,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a50533cc44da78a46beaa567921d870b, type: 2}
   nonCombatSkills:
   - {fileID: 11400000, guid: baf85150eefb1ec4c9c346305bec95a8, type: 2}
+  talanties:
+  - {fileID: 11400000, guid: 9c4741906ab9aa14ca319b990b731e0e, type: 2}
   attribute: 3
   multiverse: 0
+  constLevel: 0

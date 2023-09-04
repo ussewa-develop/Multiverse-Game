@@ -1,4 +1,5 @@
-using Unity.VisualScripting;
+using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] public ArtifactSO artifact { get; private set;}
     [SerializeField] ArtifactPanel artifactPanelPrefab;
 
-    static ArtifactPanel panel;
+    static private ArtifactPanel panel;
     [SerializeField] Canvas canvasForArtDesc;
     static public bool safePanel = false; //переменная для сохранения панельки при нажатии на артефакт
 
@@ -26,42 +27,37 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         ArtifactPanel.OnChangeSafePanel();
     }
 
-    
     public void CreatePanel()
     {
-        Vector3 posPrevSkill = Vector3.zero;//переменная для координат панельки предыдущего скилла
-        float deltaY = 7f; //
-        bool isFirstSkill = true;
+        float delta = 0f;
+        List<SkillPanel> skills = new List<SkillPanel>();//создаем новый лист для скиллов
+        DestroyPanel();//уничтожаем панель, если существует
 
-        DestroyPanel();
         panel = Instantiate(artifactPanelPrefab);
         panel.Create(this, canvasForArtDesc);
-        foreach (var skill in artifact.itemSkills) //перебираем массив скиллов
+        foreach (var skill in artifact.itemSkills)
         {
-            if (isFirstSkill)//проверяем на первый скилл в массиве
-            {
-                //ставим коорды самого контент филда и сразу расширяем контентфилд на количество скиллов
-                //
-                posPrevSkill = panel.contentField.transform.position;
-                panel.contentField.sizeDelta += new Vector2(0f, 600f * artifact.itemSkills.Count);
-                //
-                isFirstSkill = false;
-            }
-            else //если это не первый скилл, уменьшаем разрез между ними
-            {
-                deltaY = 5.5f;
-            }
-            SkillPanel skillPanel = Instantiate(panel.skillPanelPrefab, panel.contentField); // создаем панельку способности
-            skillPanel.SetSkillInPanel(skill,transform,panel.transform, 0f); // устанавливаем значения в панельку для скилла
-            skillPanel.background.SetActive(false);
-
-            skillPanel.transform.position = posPrevSkill - new Vector3(0f, deltaY, 0f);
-
-            posPrevSkill = skillPanel.transform.position;
+            SkillPanel skillPanel = Instantiate(panel.SkillPanelPrefab, panel.ContentField);
+            skillPanel.SetSkillInPanel(skill);
+            skillPanel.SetScale();
+            skillPanel.SetActiveBackground(false);
+            delta += skillPanel.Background.GetComponent<RectTransform>().sizeDelta.y;
+            skills.Add(skillPanel);
         }
 
+        panel.AddScaleForBackground(new Vector2(0, delta));
+        panel.ChangeScaleForContentField(new Vector2 (panel.ContentField.sizeDelta.x, panel.Background.GetComponent<RectTransform>().sizeDelta.y));
+        
+        Vector3 point = panel.DownPoint.transform.localPosition - new Vector3(0, 550f, 0);
+
+        foreach (var skill in skills)
+        {
+            skill.transform.localPosition = point;
+            point -= new Vector3 (0, skill.Background.GetComponent<RectTransform>().sizeDelta.y);
+        }
     }
     
+
     public void DestroyPanel()
     {
         if (panel != null)

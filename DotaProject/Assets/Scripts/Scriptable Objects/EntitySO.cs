@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum TypeAttack
@@ -5,6 +6,18 @@ public enum TypeAttack
     Melee,
     Range
 }
+
+public enum Race
+{
+    Robot,
+    Undead,
+    Animal,
+    Humanoid,
+    Elemental,
+    Other
+}
+
+
 public enum Element
 {
     Physical,
@@ -36,7 +49,7 @@ public class EntitySO : ScriptableObject
     public Sprite concept;
     [Header("\t\t\tGeneral")]
     public string entityName;
-    public Element generalElement;
+    public Race race;
     public TypeAttack typeAttack;
     public Weapon weapon;
     public WeaponType weaponType;

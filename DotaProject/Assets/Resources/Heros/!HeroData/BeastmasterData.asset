@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: fffe25941e2b7564cb39d8d74cccc6f9, type: 3}
   concept: {fileID: 21300000, guid: 3fbccc865ae6af94c888be7176534072, type: 3}
   entityName: Beastmaster
-  generalElement: 0
+  race: 3
   typeAttack: 0
   weapon: 2
   weaponType: 2
@@ -27,5 +27,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6479e66cd88b0664da616e2c55f6efb3, type: 2}
   - {fileID: 11400000, guid: cc30faaf5a52fc147944461a2596a40e, type: 2}
   nonCombatSkills: []
+  talanties: []
   attribute: 3
   multiverse: 0
+  constLevel: 0

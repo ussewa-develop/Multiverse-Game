@@ -5,17 +5,31 @@ using UnityEngine.UI;
 
 public class ArtifactPanel : MonoBehaviour
 {
-    public TextMeshProUGUI itemNameText;
-    public Image itemIcon;
-    public TextMeshProUGUI itemTypeText;
-    public TextMeshProUGUI itemDescText;
-    public GameObject downStats;
-    public GameObject background;
-    public SkillPanel skillPanelPrefab;
-    public Canvas canvasPrefab;
-    public RectTransform contentField;
-    public Button exitButton;
+    [Header("\t\t\tArtifact values")]
+    [SerializeField] private TextMeshProUGUI itemNameText;
+    [SerializeField] private Image itemIcon;
+    [SerializeField] private TextMeshProUGUI itemTypeText;
+    [SerializeField] private TextMeshProUGUI itemDescText;
+    [Space]
+    [Header("\t\t\tOther")]
+    [SerializeField] private GameObject background;
+    [SerializeField] private GameObject scrollView;
+    [SerializeField] private SkillPanel skillPanelPrefab;
+    [SerializeField] private Canvas canvasPrefab;
+    [SerializeField] private RectTransform contentField;
+    [SerializeField] private Button exitButton;
+    [SerializeField] private Transform downPoint;
+    [Space]
+    [Header("\t\t\tValues")]
+    [SerializeField] private float ratioForDelta = 43.5f;
+    [SerializeField] private float ratio = 40f;
+    [SerializeField] private float downStatsY = 0;
 
+    //public values
+    public GameObject Background { get => background; }
+    public SkillPanel SkillPanelPrefab { get => skillPanelPrefab; }
+    public RectTransform ContentField { get => contentField; }
+    public Transform DownPoint { get => downPoint; }
     public static Action SafePanelEvent;
 
     private void Start()
@@ -29,6 +43,26 @@ public class ArtifactPanel : MonoBehaviour
         EventController.SwitchMenu -= Destroy;
         SafePanelEvent -= EnableExitButton;
         
+    }
+
+    public void AddScaleForBackground(Vector2 vect)
+    {
+        background.GetComponent<RectTransform>().sizeDelta += vect;
+    }
+
+    public void ChangeScaleForBackground(Vector3 vect)
+    {
+        background.GetComponent<RectTransform>().sizeDelta = vect;
+    }
+
+    public void AddScaleForContentField(Vector2 vect)
+    {
+        contentField.sizeDelta += vect;
+    }
+
+    public void ChangeScaleForContentField(Vector2 vect)
+    {
+        contentField.sizeDelta = vect;
     }
 
     public void EnableExitButton()
@@ -47,6 +81,19 @@ public class ArtifactPanel : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void SetScale()
+    {
+        float delta = itemDescText.preferredHeight / ratioForDelta;
+        Vector2 deltaVector = new Vector2(0, delta * ratio);
+
+        background.GetComponent<RectTransform>().sizeDelta += deltaVector;
+        //scrollView.GetComponent<RectTransform>().sizeDelta += deltaVector;
+
+        downPoint.localPosition = new Vector3(downPoint.localPosition.x, downStatsY);
+        downPoint.transform.localPosition -= new Vector3(deltaVector.x, deltaVector.y);
+    }
+
+
     public void Create(ArtifactGate artifactGate, Canvas artifactCanvas) //создание панельки описания артефакта
     {
         gameObject.transform.SetParent(artifactCanvas.transform, false);
@@ -62,6 +109,7 @@ public class ArtifactPanel : MonoBehaviour
         float offsetY = 3f;
 
         transform.position = artifactGate.gameObject.transform.position - new Vector3(offsetX, offsetY, 0); // спускаем панельку вниз и немного вправо
+        SetScale();
     }
 
 }

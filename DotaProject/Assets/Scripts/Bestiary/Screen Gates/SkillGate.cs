@@ -17,11 +17,6 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     static SkillPanel panel;
     [HideInInspector] public Canvas canvasForSkillPanel;
 
-    private void Start()
-    {
-        Instantiate();
-    }
-
     public void Instantiate()
     {
         gameObject.name = skill.skillName;
@@ -111,7 +106,7 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         DestroyPanel();
         panel = Instantiate(panelPrefab);
-        panel.SetSkillInPanel(skill,transform, canvasForSkillPanel, 3.5f);
+        panel.SetSkillInPanel(skill,transform, canvasForSkillPanel,3.5f);
     }
     
 

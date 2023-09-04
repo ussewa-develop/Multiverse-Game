@@ -274,8 +274,8 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 32
     m_Scale: 1
-    m_Name: Human
-    m_HashCode: 84943007
+    m_Name: Humanoid
+    m_HashCode: -1125022211
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 33

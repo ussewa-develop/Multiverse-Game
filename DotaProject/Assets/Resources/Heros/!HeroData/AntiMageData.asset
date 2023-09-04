@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 334d4a2817f08a840afe5bb6cd6d1eae, type: 3}
   concept: {fileID: 21300000, guid: 9f7f775b4665a584b85a6ccee519f609, type: 3}
   entityName: Antimage
-  generalElement: 1
+  race: 3
   typeAttack: 0
   weapon: 4
   weaponType: 2
@@ -26,5 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d9a1b368cdf872b418c9c370ba4978d1, type: 2}
   - {fileID: 11400000, guid: 016d26bb47aa96946b5dea14de7e1e8a, type: 2}
   nonCombatSkills: []
+  talanties: []
   attribute: 1
   multiverse: 0
+  constLevel: 0
