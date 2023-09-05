@@ -12,13 +12,14 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField,Tooltip("Присваивается только для префаба")] SkillPanel panelPrefab;
 
     //another
-    private EntityScreen heroScreen;
+    private EntityScreen entityScreen;
     bool THIS_SKILL_ICON = false;
     static SkillPanel panel;
     [HideInInspector] public Canvas canvasForSkillPanel;
 
-    public void Instantiate()
+    public void Instantiate(EntityScreen entityScreen)
     {
+        this.entityScreen = entityScreen;
         gameObject.name = skill.skillName;
         if (!ThisEntityOrArtifact())
         {
@@ -32,10 +33,6 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void ClickButton()
     {
-        if (heroScreen == null)
-        {
-            heroScreen = FindObjectOfType<EntityScreen>();
-        }
         if (skill.IsHasSomeSkills)
         {
             CreateOtherSpells(skill.otherSkills);
@@ -107,8 +104,19 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         DestroyPanel();
         panel = Instantiate(panelPrefab);
         panel.SetSkillInPanel(skill,transform, canvasForSkillPanel,3.5f);
+        CheckOnBorders(transform, panel);
     }
     
+    public void CheckOnBorders(Transform point, SkillPanel panel)
+    {
+        float offset = 200f;
+        float height = Math.Abs(point.localPosition.y) + panel.Background.sizeDelta.y;
+        if (height>entityScreen.ContentField.sizeDelta.y)
+        {
+            panel.transform.position = new Vector3(panel.transform.position.x, point.position.y);
+            panel.transform.localPosition += new Vector3(0, panel.Background.sizeDelta.y-offset);
+        }
+    }
 
     public void DestroyPanel()
     {

@@ -15,7 +15,7 @@ public class HeroScreen : EntityScreen
         attributeIcon.sprite = IconLoader.LoadIcon(hero.attribute);
         attributeIcon.SetNativeSize();
 
-        CreateSpells(talantiesText.transform, hero.talanties, contentField, CreateCanvasForSpells(contentField));
+        CreateSpells(talantiesText.transform, hero.talanties, ContentField, CreateCanvasForSpells(ContentField));
 
         base.CreateHero(hero);
     }

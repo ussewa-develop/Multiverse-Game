@@ -26,7 +26,7 @@ public class ArtifactPanel : MonoBehaviour
     [SerializeField] private float downStatsY = 0;
 
     //public values
-    public GameObject Background { get => background; }
+    public RectTransform Background { get => background.GetComponent<RectTransform>(); }
     public SkillPanel SkillPanelPrefab { get => skillPanelPrefab; }
     public RectTransform ContentField { get => contentField; }
     public Transform DownPoint { get => downPoint; }
@@ -47,12 +47,12 @@ public class ArtifactPanel : MonoBehaviour
 
     public void AddScaleForBackground(Vector2 vect)
     {
-        background.GetComponent<RectTransform>().sizeDelta += vect;
+        Background.sizeDelta += vect;
     }
 
     public void ChangeScaleForBackground(Vector3 vect)
     {
-        background.GetComponent<RectTransform>().sizeDelta = vect;
+        Background.sizeDelta = vect;
     }
 
     public void AddScaleForContentField(Vector2 vect)

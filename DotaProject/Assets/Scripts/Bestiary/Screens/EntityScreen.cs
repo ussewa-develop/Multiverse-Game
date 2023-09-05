@@ -10,27 +10,29 @@ public abstract class EntityScreen : MonoBehaviour
     //скрипт экрана героя
 
     [Header("\t\t\tGeneral")]
-    [SerializeField] Image entityIcon;
-    [SerializeField] Image entityConceptSprite;
-    [SerializeField] TextMeshProUGUI heroNameText;
-    [SerializeField] TextMeshProUGUI raceEntityText;
-    [SerializeField] TextMeshProUGUI combatSkillText;
-    [SerializeField] TextMeshProUGUI nonCombatSkillsText;
-    [SerializeField] public RectTransform contentField;
+    [SerializeField] private Image entityIcon;
+    [SerializeField] private Image entityConceptSprite;
+    [SerializeField] private TextMeshProUGUI heroNameText;
+    [SerializeField] private TextMeshProUGUI raceEntityText;
+    [SerializeField] private TextMeshProUGUI combatSkillText;
+    [SerializeField] private TextMeshProUGUI nonCombatSkillsText;
+    [SerializeField] protected RectTransform contentField;
     [Space]
     [Header("\t\tAttack/Weapon")]
-    [SerializeField] TextMeshProUGUI typeAttackText;
-    [SerializeField] TextMeshProUGUI elementAttackText;
-    [SerializeField] TextMeshProUGUI weaponText;
-    [SerializeField] TextMeshProUGUI weaponTypeText;
-    [SerializeField] Image attackIcon;
+    [SerializeField] private TextMeshProUGUI typeAttackText;
+    [SerializeField] private TextMeshProUGUI elementAttackText;
+    [SerializeField] private TextMeshProUGUI weaponText;
+    [SerializeField] private TextMeshProUGUI weaponTypeText;
+    [SerializeField] private Image attackIcon;
     [Space]
     [Header("\t\t\tPrefabs")]
-    [SerializeField] public Canvas canvasForSpells;
-    [SerializeField] public RectTransform summonContentPrefab; 
-    [SerializeField] public Image iconAbillityPrefab;
-    [SerializeField] SkillSO emptySkill;
+    [SerializeField] private Canvas canvasForSpells;
+    [SerializeField] private RectTransform summonContentPrefab; 
+    [SerializeField] private Image iconAbillityPrefab;
+    [SerializeField] private SkillSO emptySkill;
 
+    //public values
+    public RectTransform ContentField { get => contentField; }
 
     private void Start()
     {
@@ -100,7 +102,7 @@ public abstract class EntityScreen : MonoBehaviour
         gate.rectTransform.SetParent(parent, false);
         gate.GetComponent<SkillGate>().skill = skill;
         gate.GetComponent<SkillGate>().canvasForSkillPanel = canvas;
-        gate.GetComponent<SkillGate>().Instantiate();
+        gate.GetComponent<SkillGate>().Instantiate(this);
         if (skill.IsHasSummons)
         {
             List<SummonSO> summons = new List<SummonSO>();
@@ -121,8 +123,8 @@ public abstract class EntityScreen : MonoBehaviour
         summonContent = Instantiate(summonContentPrefab, contentField);
         contentField.sizeDelta += new Vector2(0, 1500);
         summonContent.transform.localPosition = new Vector2(0, EventController.yForSummonsContentfield);
-
         summonContent.GetComponent<SummonScreen>().CreateEntity(summon,summonContent);
+        summonContent.GetComponent<SummonScreen>().Instantiate(summonContent);
 
         EventController.yForSummonsContentfield -= EventController.deltaForY; // координата Y для выставления позиции сумоннов
     }

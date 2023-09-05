@@ -39,21 +39,20 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             SkillPanel skillPanel = Instantiate(panel.SkillPanelPrefab, panel.ContentField);
             skillPanel.SetSkillInPanel(skill);
-            skillPanel.SetScale();
             skillPanel.SetActiveBackground(false);
-            delta += skillPanel.Background.GetComponent<RectTransform>().sizeDelta.y;
+            delta += skillPanel.Background.sizeDelta.y;
             skills.Add(skillPanel);
         }
 
         panel.AddScaleForBackground(new Vector2(0, delta));
-        panel.ChangeScaleForContentField(new Vector2 (panel.ContentField.sizeDelta.x, panel.Background.GetComponent<RectTransform>().sizeDelta.y));
+        panel.ChangeScaleForContentField(new Vector2 (panel.ContentField.sizeDelta.x, panel.Background.sizeDelta.y));
         
         Vector3 point = panel.DownPoint.transform.localPosition - new Vector3(0, 550f, 0);
 
         foreach (var skill in skills)
         {
             skill.transform.localPosition = point;
-            point -= new Vector3 (0, skill.Background.GetComponent<RectTransform>().sizeDelta.y);
+            point -= new Vector3 (0, skill.Background.sizeDelta.y);
         }
     }
     

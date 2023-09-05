@@ -16,8 +16,6 @@ public class SkillPanel : MonoBehaviour
     [Space]
     [Header("\t\t\tOther")]
     [SerializeField] GameObject background;
-    public GameObject Background { get => background; }
-
     [SerializeField] GameObject downStats;
     [SerializeField] GameObject toolTip;
     [SerializeField] TextMeshProUGUI textTip;
@@ -27,20 +25,22 @@ public class SkillPanel : MonoBehaviour
     [SerializeField] float ratioForDelta = 43.5f;
     [SerializeField] float downStatsY = 322f;
 
+    //public values
+    public RectTransform Background { get => background.GetComponent<RectTransform>(); }
+
     private void Start()
     {
-        Instantiate();
+        EventController.SwitchMenu += Destroy;
     }
 
     private void Instantiate()
     {
-        EventController.SwitchMenu += Destroy;
         SetScale();
     }
 
     public void SetActiveBackground(bool value)
     {
-        Background.SetActive(value);
+        background.SetActive(value);
     }
 
     public void SetScale()
@@ -93,6 +93,8 @@ public class SkillPanel : MonoBehaviour
             skillDamageTypeText.text = Localizator.Localize("DamageType") +
                 IconLoader.LoadSmile(skill.damageType) + Localizator.Localize(skill.damageType.ToString());
         }
+
+        Instantiate();
     }
 
 

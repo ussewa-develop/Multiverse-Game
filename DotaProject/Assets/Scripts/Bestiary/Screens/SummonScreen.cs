@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 public class SummonScreen : EntityScreen
 {
     private void Start()
@@ -15,5 +17,10 @@ public class SummonScreen : EntityScreen
     private void OnDestroy()
     {
         EventController.SwitchMenu -= Destroy;
+    }
+
+    public void Instantiate(RectTransform contentField)
+    {
+        this.contentField = contentField;
     }
 }
