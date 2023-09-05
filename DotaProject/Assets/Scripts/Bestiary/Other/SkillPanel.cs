@@ -21,7 +21,8 @@ public class SkillPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI textTip;
     [Space]
     [Header("\t\t\tValues")]
-    [SerializeField] float ratio = 1.08f; // соотношение примерно 25/23
+    [SerializeField] float ratio = 40f; //соотношение
+    [SerializeField] float ratioForDelta = 43.5f; //
     [SerializeField] float downStatsY = 322f;
 
     //public values
@@ -44,8 +45,11 @@ public class SkillPanel : MonoBehaviour
 
     public void SetScale()
     {
-        Vector2 deltaVector = new Vector2(0, skillDescText.preferredHeight / ratio);
+        float delta = skillDescText.preferredHeight / ratioForDelta;
+        Vector2 deltaVector = new Vector2(0, delta * ratio);
+
         background.GetComponent<RectTransform>().sizeDelta += deltaVector;
+
         downStats.transform.localPosition = new Vector3(downStats.transform.localPosition.x, downStatsY);
         downStats.transform.localPosition -= new Vector3(deltaVector.x, deltaVector.y);
     }
