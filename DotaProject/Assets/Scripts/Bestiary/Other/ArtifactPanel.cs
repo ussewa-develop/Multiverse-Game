@@ -24,6 +24,7 @@ public class ArtifactPanel : MonoBehaviour
     [SerializeField] private float ratioForDelta = 43.5f;
     [SerializeField] private float ratio = 40f;
     [SerializeField] private float downStatsY = 0;
+    private RectTransform generalScrollView;
 
     //public values
     public RectTransform Background { get => background.GetComponent<RectTransform>(); }
@@ -44,6 +45,7 @@ public class ArtifactPanel : MonoBehaviour
         SafePanelEvent -= EnableExitButton;
         
     }
+
 
     public void AddScaleForBackground(Vector2 vect)
     {
@@ -102,14 +104,9 @@ public class ArtifactPanel : MonoBehaviour
         itemIcon.sprite = artifactGate.artifact.icon;
         itemTypeText.text = Localizator.Localize(artifactGate.artifact.itemType.ToString()) 
             + " (" + Localizator.Localize(artifactGate.artifact.itemSlot.ToString()) + ")"; // -> ItemType (ItemSlot)
-
-        float currentX = artifactGate.transform.localPosition.x; //координата в диапазоне от -960 до 960
-        float delta = 480f; 
-        float offsetX = currentX / delta;
-        float offsetY = 3f;
-
-        transform.position = artifactGate.gameObject.transform.position - new Vector3(offsetX, offsetY, 0); // спускаем панельку вниз и немного вправо
         SetScale();
     }
+
+
 
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GatesScreen : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class GatesScreen : MonoBehaviour
         for (int indexChild = 0; indexChild < gameObject.transform.childCount; indexChild++)
         {
             GameObject child = gameObject.transform.GetChild(indexChild).gameObject;
-            if (!child.GetComponent<Canvas>())//на случай, если в дочерних обьектах есть канвас
+            if (!child.GetComponent<Canvas>() || !child.GetComponent<ScrollRect>())//на случай, если в дочерних обьектах есть канвас
             {
                 childList.Add(child);
             }

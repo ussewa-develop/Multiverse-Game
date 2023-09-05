@@ -27,7 +27,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6479e66cd88b0664da616e2c55f6efb3, type: 2}
   - {fileID: 11400000, guid: cc30faaf5a52fc147944461a2596a40e, type: 2}
   nonCombatSkills: []
-  talanties: []
+  talanties:
+  - {fileID: 11400000, guid: 9c4741906ab9aa14ca319b990b731e0e, type: 2}
   attribute: 3
   multiverse: 0
   constLevel: 0

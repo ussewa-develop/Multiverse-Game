@@ -104,10 +104,10 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         DestroyPanel();
         panel = Instantiate(panelPrefab);
         panel.SetSkillInPanel(skill,transform, canvasForSkillPanel,3.5f);
-        CheckOnBorders(transform, panel);
+        CheckDownBorder(transform, panel);
     }
     
-    public void CheckOnBorders(Transform point, SkillPanel panel)
+    public void CheckDownBorder(Transform point, SkillPanel panel)
     {
         float offset = 200f;
         float height = Math.Abs(point.localPosition.y) + panel.Background.sizeDelta.y;

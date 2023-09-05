@@ -3,6 +3,8 @@ using UnityEngine;
 public class ArtifactGatesScreen : GatesScreen
 {
     [SerializeField] ArtifactGate artifactIconPrefab;
+    [SerializeField] Canvas canvasForPanel;
+    [SerializeField] RectTransform scrollView;
     new void Start()
     {
         LoadAllArtSO();
@@ -15,7 +17,7 @@ public class ArtifactGatesScreen : GatesScreen
         foreach (var art in allSO)
         {
             ArtifactGate artGate = Instantiate(artifactIconPrefab, transform).GetComponent<ArtifactGate>();
-            artGate.Instantiate(art);
+            artGate.Initialize(art, canvasForPanel, scrollView);
         }
     }
 

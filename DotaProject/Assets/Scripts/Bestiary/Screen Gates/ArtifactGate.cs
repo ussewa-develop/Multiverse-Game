@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,16 +8,18 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] public ArtifactSO artifact { get; private set;}
     [SerializeField] ArtifactPanel artifactPanelPrefab;
 
+    private RectTransform scrollView;
     static private ArtifactPanel panel;
     [SerializeField] Canvas canvasForArtDesc;
     static public bool safePanel = false; //переменная для сохранения панельки при нажатии на артефакт
 
-    public void Instantiate(ArtifactSO artifact)
+    public void Initialize(ArtifactSO artifact, Canvas canvas, RectTransform scrollView)
     {
         this.artifact = artifact;
         gameObject.name = artifact.itemName;
         GetComponent<Image>().sprite = artifact.icon;
-        canvasForArtDesc = transform.parent.GetChild(0).gameObject.GetComponent<Canvas>();
+        canvasForArtDesc = canvas;
+        this.scrollView = scrollView;
     }
 
     public void ClickOn()
@@ -35,6 +36,7 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         panel = Instantiate(artifactPanelPrefab);
         panel.Create(this, canvasForArtDesc);
+        CheckHorizontalBorders(transform, panel);
         foreach (var skill in artifact.itemSkills)
         {
             SkillPanel skillPanel = Instantiate(panel.SkillPanelPrefab, panel.ContentField);
@@ -47,7 +49,7 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         panel.AddScaleForBackground(new Vector2(0, delta));
         panel.ChangeScaleForContentField(new Vector2 (panel.ContentField.sizeDelta.x, panel.Background.sizeDelta.y));
         
-        Vector3 point = panel.DownPoint.transform.localPosition - new Vector3(0, 550f, 0);
+        Vector3 point = panel.DownPoint.transform.localPosition - new Vector3(0, 550f, 0); //550f - просто оптимальная разница
 
         foreach (var skill in skills)
         {
@@ -55,7 +57,29 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             point -= new Vector3 (0, skill.Background.sizeDelta.y);
         }
     }
-    
+
+    public void CheckHorizontalBorders(Transform point, ArtifactPanel panel)
+    {
+        float distanceToCenter = scrollView.sizeDelta.x/2f;
+        float localPosPoint = point.localPosition.x;
+        float currentX;
+
+        if (localPosPoint <= distanceToCenter) //число в диапазоне от 0 до до половины разрешения экрана
+        {
+            currentX = distanceToCenter - localPosPoint; 
+        }
+        else //число в диапазоне от половины разрешения экрана до всего разрешения
+        {
+            currentX = localPosPoint - distanceToCenter; 
+            currentX *= -1f;
+        }
+
+        float shiftFactor = scrollView.sizeDelta.x / 4f;
+        float offsetX = currentX / shiftFactor;
+        float offsetY = 3f;
+
+        panel.transform.position = transform.position - new Vector3(-offsetX, offsetY, 0);
+    }
 
     public void DestroyPanel()
     {
