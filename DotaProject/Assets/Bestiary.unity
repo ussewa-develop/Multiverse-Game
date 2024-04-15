@@ -6094,6 +6094,7 @@ MonoBehaviour:
   - {fileID: 1854582644}
   otherUI:
   - {fileID: 1280826806}
+  _startMenu: bestiary
 --- !u!4 &1534311607
 Transform:
   m_ObjectHideFlags: 0

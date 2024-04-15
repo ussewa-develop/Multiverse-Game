@@ -5,10 +5,11 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] List<Menu> screens;
     [SerializeField] List<GameObject> otherUI;
+    [SerializeField] string _startMenu;
 
     private void Start()
     {
-        OpenMenu("bestiary");
+        OpenMenu(_startMenu);
     }
 
     public void OpenMenu(string menuName)

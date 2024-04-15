@@ -39,4 +39,5 @@ public class GatesScreen : MonoBehaviour
             childList[iconIndex].transform.localPosition += new Vector3(offsetForIconsOnX * iconIndex, offsetForIconsOnY);
         }
     }
+
 }
