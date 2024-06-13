@@ -17,14 +17,16 @@ public enum Race
     Other
 }
 
-
 public enum Element
 {
     Physical,
-    Slash,
     Cryo,
     Darkness,
-    Poison
+    Poison,
+    Blast,
+    Gas,
+    Magnetic,
+    Psyonic
 }
 public enum Weapon
 {
@@ -53,7 +55,7 @@ public class EntitySO : ScriptableObject
     public TypeAttack typeAttack;
     public Weapon weapon;
     public WeaponType weaponType;
-    public Element attackElement;
+    public List<Element> attackElement;
     public SkillSO[] skills; // battle skills
     public SkillSO[] nonCombatSkills; // race/non battle skills
     public SkillSO[] talanties;

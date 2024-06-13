@@ -19,13 +19,14 @@ MonoBehaviour:
   typeAttack: 1
   weapon: 3
   weaponType: 1
-  attackElement: 2
+  attackElement: 01000000
   skills:
   - {fileID: 11400000, guid: a4c6109b4a3859b438e4b840a4db53c0, type: 2}
   - {fileID: 11400000, guid: afcf5c628e96b4f4887628a8ca247b4c, type: 2}
   - {fileID: 11400000, guid: 817b756890429ef4488f86686dbada0c, type: 2}
   - {fileID: 11400000, guid: 856ff86748cb5d5449f9897b6f848014, type: 2}
-  nonCombatSkills: []
+  nonCombatSkills:
+  - {fileID: 11400000, guid: 705ed32612c30d540852ba5283256f5e, type: 2}
   talanties: []
   attribute: 2
   multiverse: 0

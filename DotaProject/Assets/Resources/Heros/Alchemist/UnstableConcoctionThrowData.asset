@@ -24,5 +24,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d13732c28da31543b9f816bd66d3389, type: 2}
   IsHasSummons: 0
   summon: []
-  IsDamaging: 0
-  damageType: 0
+  IsDamaging: 1
+  IsCombinedDamage: 0
+  damageType: 04000000

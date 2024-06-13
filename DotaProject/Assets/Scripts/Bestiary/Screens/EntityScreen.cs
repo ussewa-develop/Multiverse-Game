@@ -64,7 +64,11 @@ public abstract class EntityScreen : MonoBehaviour
         weaponTypeText.text = Localizator.Localize("WeaponType") + Localizator.Localize(entity.weaponType.ToString());
         attackIcon.sprite = IconLoader.LoadIcon(entity.weapon);
 
-        elementAttackText.text = Localizator.Localize("ElementOfAttack") + IconLoader.LoadSmile(entity.attackElement) + Localizator.Localize(entity.attackElement.ToString());
+        elementAttackText.text = Localizator.Localize("ElementOfAttack");
+        foreach(Element attackElement in entity.attackElement)
+        {
+            elementAttackText.text += " " + IconLoader.LoadSmile(attackElement) + Localizator.Localize(attackElement.ToString());
+        }
 
         CreateSpells(combatSkillText.transform, entity.skills, parent, canvas); //создание обычных скиллов
 

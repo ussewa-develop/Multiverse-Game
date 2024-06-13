@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CustomEditor(typeof(SkillSO))]
 public class SkillSOEditor : Editor
@@ -23,6 +24,16 @@ public class SkillSOEditor : Editor
         if(skill.IsDamaging)
         {
             EditorGUILayout.PropertyField(serializedObject.FindProperty("damageType"), new GUIContent("Damage Type"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("IsCombinedDamage"), new GUIContent("Combined Damage"));
+        }
+
+        if(skill.IsDamaging && skill.damageType.Count > 1)
+        {
+            skill.IsCombinedDamage = true;
+        }
+        else
+        {
+            skill.IsCombinedDamage = false;
         }
 
         // Применить изменения

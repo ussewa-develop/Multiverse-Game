@@ -35,5 +35,6 @@ public class SkillSO : ScriptableObject
 
     [SerializeField, Tooltip("Способность наносит урон?")]
     public bool IsDamaging = false;
-    [HideInInspector] public Element damageType;
+    [HideInInspector] public bool IsCombinedDamage = false;
+    [HideInInspector] public List<Element> damageType;
 }

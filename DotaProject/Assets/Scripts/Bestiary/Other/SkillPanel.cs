@@ -52,6 +52,7 @@ public class SkillPanel : MonoBehaviour
 
         downStats.transform.localPosition = new Vector3(downStats.transform.localPosition.x, downStatsY);
         downStats.transform.localPosition -= new Vector3(deltaVector.x, deltaVector.y);
+        toolTip.transform.position = new Vector3(toolTip.transform.position.x, skillActionPointText.transform.position.y - 40f);
     }
 
     private void OnDestroy()
@@ -90,8 +91,11 @@ public class SkillPanel : MonoBehaviour
         {
             skillDamageTypeText.gameObject.SetActive(true);
 
-            skillDamageTypeText.text = Localizator.Localize("DamageType") +
-                IconLoader.LoadSmile(skill.damageType) + Localizator.Localize(skill.damageType.ToString());
+            skillDamageTypeText.text = Localizator.Localize("DamageType");
+            foreach(var damageType in skill.damageType)
+            {
+                skillDamageTypeText.text += " "+ IconLoader.LoadSmile(damageType) + Localizator.Localize(damageType.ToString());
+            }
         }
 
         Instantiate();

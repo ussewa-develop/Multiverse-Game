@@ -23,5 +23,6 @@ MonoBehaviour:
   otherSkills: []
   IsHasSummons: 0
   summon: []
-  IsDamaging: 0
-  damageType: 2
+  IsDamaging: 1
+  IsCombinedDamage: 0
+  damageType: 01000000

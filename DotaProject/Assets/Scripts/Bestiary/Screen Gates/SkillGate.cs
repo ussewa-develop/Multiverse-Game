@@ -12,8 +12,8 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField,Tooltip("Присваивается только для префаба")] SkillPanel panelPrefab;
 
     //another
-    private EntityScreen entityScreen;
-    bool THIS_SKILL_ICON = false;
+    [SerializeField]private EntityScreen entityScreen;
+    [SerializeField]bool THIS_SKILL_ICON = false;
     static SkillPanel panel;
     [HideInInspector] public Canvas canvasForSkillPanel;
 
@@ -23,12 +23,17 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         gameObject.name = skill.skillName;
         if (!ThisEntityOrArtifact())
         {
-            EventController.SwitchMenu += Destroy;
+            SubscribeOnSwitchMenuEvent();
         }
         if (panelPrefab != null)
         {
             THIS_SKILL_ICON = true;
         }
+    }
+
+    public void SubscribeOnSwitchMenuEvent()
+    {
+        EventController.SwitchMenu += Destroy;
     }
 
     public void ClickButton()
@@ -69,6 +74,7 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             gate.rectTransform.SetParent(gameObject.transform.parent, false);
             gate.GetComponent<SkillGate>().canvasForSkillPanel = canvasForSkillPanel;
             gate.GetComponent<SkillGate>().skill = skill;
+            gate.GetComponent<SkillGate>().SubscribeOnSwitchMenuEvent();
             gate.sprite = skill.skillIcon;
 
             //

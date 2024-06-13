@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: BaneData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: df569e7e498a12f4a83e4a7a2531f4f0, type: 3}
+  concept: {fileID: 21300000, guid: a17bada203f89264094721c50397cd03, type: 3}
+  entityName: Bane
+  race: 4
+  typeAttack: 1
+  weapon: 3
+  weaponType: 1
+  attackElement: 0700000002000000
+  skills:
+  - {fileID: 11400000, guid: 43b96155e67373349b5276b65b3b51bf, type: 2}
+  - {fileID: 11400000, guid: a7e8aa0bf45133f4db0563303417ded4, type: 2}
+  - {fileID: 11400000, guid: 1d0175498ba7d434fb72f74cf790ac6d, type: 2}
+  - {fileID: 11400000, guid: ec191d61b417a734e802e242e723d702, type: 2}
+  nonCombatSkills:
+  - {fileID: 11400000, guid: baf85150eefb1ec4c9c346305bec95a8, type: 2}
+  - {fileID: 11400000, guid: 747a85440d9ff084285ef7b01a7a82f1, type: 2}
+  talanties: []
+  attribute: 3
+  multiverse: 0
+  constLevel: 0

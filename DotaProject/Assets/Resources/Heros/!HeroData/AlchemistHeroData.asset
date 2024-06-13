@@ -15,11 +15,11 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: e131a05c3dd583e459edaaf3b280f5ba, type: 3}
   concept: {fileID: 21300000, guid: 575700edcc22e8645b8601d143c8cbb9, type: 3}
   entityName: Alchemist
-  race: 3
+  race: 5
   typeAttack: 0
   weapon: 1
   weaponType: 1
-  attackElement: 0
+  attackElement: 00000000
   skills:
   - {fileID: 11400000, guid: ddcbda97acaebe24e981708a11fcb6c9, type: 2}
   - {fileID: 11400000, guid: 9d13732c28da31543b9f816bd66d3389, type: 2}

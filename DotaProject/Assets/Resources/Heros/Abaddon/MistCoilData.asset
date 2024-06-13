@@ -24,4 +24,5 @@ MonoBehaviour:
   IsHasSummons: 0
   summon: []
   IsDamaging: 1
-  damageType: 3
+  IsCombinedDamage: 1
+  damageType: 0500000002000000

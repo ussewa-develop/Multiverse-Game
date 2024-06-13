@@ -19,7 +19,7 @@ MonoBehaviour:
   typeAttack: 0
   weapon: 2
   weaponType: 2
-  attackElement: 0
+  attackElement: 00000000
   skills:
   - {fileID: 11400000, guid: 7ce0d206d77797c4db86598af95d56c0, type: 2}
   - {fileID: 11400000, guid: 7599ff03bbc2cfd44b93417c0945ca6c, type: 2}
