@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e68b49fa4af04ca47eb026b37a743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gridSize: {x: 16, y: 9}
+  _gridSize: {x: 10, y: 10}
   _grassCell: {fileID: -7385857552330808280, guid: bf5ea311ac9dcb647a007fbd72314c08, type: 3}
   _mountainCell: {fileID: -3842884320938457877, guid: 594d1ddacd5d80544b822fc7d762447c, type: 3}
   _offset: 0

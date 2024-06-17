@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static Cell;
 
 public class CellManager : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class CellManager : MonoBehaviour
                 var cell = Instantiate(randomCell, position, Quaternion.identity, _parent);
                 cell.name = $"X: {x} Y: {y}";
 
-                cell.Init(x,y);
+                cell.Init(x,y, new SquareCoords { Pos = new Vector2 (x,y)});
                 _cells[new Vector2(x, y)] = cell;
             }
         }
@@ -63,6 +64,15 @@ public class CellManager : MonoBehaviour
         //
         */
         _mainCamera.transform.position = new Vector3(offsetX, offsetY, offsetZ);//перемещаем камеру в центр матрицы
+        CacheNeighbors(_cells);
+    }
+
+    private void CacheNeighbors(Dictionary<Vector2,Cell> cells)
+    {
+        foreach (var cell in cells)
+        {
+            cell.Value.CacheNeighbors();
+        }
 
         GameManager.Instance.ChangeState(GameState.SpawnHeroes);
     }
