@@ -87,9 +87,17 @@ public abstract class EntityScreen : MonoBehaviour
 
         if(skills is not null && skills.Length > 0)
         {
+            int counter = 0;//переменная для подсчета скиллов, которые не нужно создавать в бестиарии
+            foreach(SkillSO skill in skills) //подсчет "не нужных" скиллов в бестиарии
+            {
+                if(!skill.IsAddedInBestiary)
+                {
+                    counter++;
+                }
+            }
             for (int skillId = 0; skillId < skills.Length; skillId++) //создаю иконки способностей в зависимости от их количества
             {
-                CreateSpell(skills[skillId], skillId, skills.Length, yCoordinate, parent, canvas);
+                CreateSpell(skills[skillId], skillId, skills.Length-counter, yCoordinate, parent, canvas);
             }
         }
         else
@@ -101,6 +109,16 @@ public abstract class EntityScreen : MonoBehaviour
 
     public void CreateSpell(SkillSO skill, int skillId, int skillsCount ,float yForSkill, Transform parent, Canvas canvas) //создаем иконки способностей героя
     {
+        if (!skill.IsAddedInBestiary && skill.IsHasSummons) // если спобность не нужно добавлять в бестиарий, но с нее будет сумон
+        {
+            List<SummonSO> summons = new List<SummonSO>();
+            summons = skill.summon;
+            foreach (var summon in summons)
+            {
+                CreateSummon(summon);
+            }
+            return;
+        }
         Image gate;
         gate = Instantiate(iconAbillityPrefab, gameObject.transform);
         gate.rectTransform.SetParent(parent, false);
@@ -118,6 +136,7 @@ public abstract class EntityScreen : MonoBehaviour
         }
         gate.sprite = gate.GetComponent<SkillGate>().skill.skillIcon;
         gate.transform.localPosition = CalcCoordForSpell(skillsCount, skillId, yForSkill);
+        
     }
 
 

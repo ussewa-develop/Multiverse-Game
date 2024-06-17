@@ -77,6 +77,22 @@
 			"value": "Магнит"
 		},
 		{
+			"key": "Blood",
+			"value": "Кровь"
+		},
+		{
+			"key": "Pyro",
+			"value": "Огонь"
+		},
+		{
+			"key": "Anemo",
+			"value": "Воздух"
+		},
+		{
+			"key": "Void",
+			"value": "Пустота"
+		},
+		{
 			"key": "Psyonic",
 			"value": "Пси-урон"
 		},
@@ -151,6 +167,10 @@
 		{
 			"key": "Weapon_in_two_hands",
 			"value": "Оружие в двух руках"
+		},
+		{
+			"key": "Nunchaku",
+			"value": "Нунчаки"
 		},
 		{
 			"key": "AttackIcon",

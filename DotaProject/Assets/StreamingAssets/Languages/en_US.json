@@ -77,6 +77,22 @@
 			"value": "Magnetic"
 		},
 		{
+			"key": "Blood",
+			"value": "Blood"
+		},
+		{
+			"key": "Pyro",
+			"value": "Pyro"
+		},
+		{
+			"key": "Anemo",
+			"value": "Anemo"
+		},
+		{
+			"key": "Void",
+			"value": "Void"
+		},
+		{
 			"key": "Psyonic",
 			"value": "Psyonic"
 		},
@@ -151,6 +167,10 @@
 		{
 			"key": "Weapon_in_two_hands",
 			"value": "Weapon in two hands"
+		},
+		{
+			"key": "Nunchaku",
+			"value": "Nunchaku"
 		},
 		{
 			"key": "AttackIcon",

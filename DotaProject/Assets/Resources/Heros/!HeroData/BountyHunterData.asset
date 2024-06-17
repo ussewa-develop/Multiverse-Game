@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: BountyHunterData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: d7833d67c8c05674a805dbddf8703b77, type: 3}
+  concept: {fileID: 21300000, guid: f0245e3f9d27686498d0273cd2f4a6b4, type: 3}
+  entityName: Bounty Hunter
+  race: 3
+  typeAttack: 0
+  weapon: 4
+  weaponType: 2
+  attackElement: 00000000
+  skills:
+  - {fileID: 11400000, guid: e37413da01c92744a9458e23b0fca3e5, type: 2}
+  - {fileID: 11400000, guid: 685f66e543eb61447b0250c0029da887, type: 2}
+  - {fileID: 11400000, guid: b83671e7a249cdd49b55b104b7ef65fb, type: 2}
+  - {fileID: 11400000, guid: 874335f9ed9c4744a84110897657f46f, type: 2}
+  - {fileID: 11400000, guid: bb146479a2e9a4c46bd9a53180fc13e3, type: 2}
+  nonCombatSkills: []
+  talanties: []
+  attribute: 1
+  multiverse: 0
+  constLevel: 0

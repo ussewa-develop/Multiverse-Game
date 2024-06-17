@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f20d8c996bf6645be3d6075f3ad13b, type: 3}
+  m_Name: WindCompanion
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: f5a52f8bd86e8f746aec27564d122014, type: 3}
+  concept: {fileID: 21300000, guid: 14034754b13845841875cd7cf0ca7ee4, type: 3}
+  entityName: Wind Warrior
+  race: 4
+  typeAttack: 1
+  weapon: 3
+  weaponType: 1
+  attackElement: 0a000000
+  skills:
+  - {fileID: 11400000, guid: db32cd337eacc4347ac403c4f9a6dba5, type: 2}
+  - {fileID: 11400000, guid: 0ba09d7ec5d988b4b96559f6e242aa13, type: 2}
+  - {fileID: 11400000, guid: b07b9e1e9d923e64c829f07095b763de, type: 2}
+  - {fileID: 11400000, guid: b8d3830b16d1eb244b146d4f209cf771, type: 2}
+  nonCombatSkills:
+  - {fileID: 11400000, guid: cc5a285b73e0c874eac22f43750d570e, type: 2}
+  talanties: []

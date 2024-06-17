@@ -26,7 +26,11 @@ public enum Element
     Blast,
     Gas,
     Magnetic,
-    Psyonic
+    Psyonic,
+    Blood,
+    Pyro,
+    Anemo,
+    Void
 }
 public enum Weapon
 {
@@ -34,7 +38,8 @@ public enum Weapon
     Fists,
     Axe,
     Orb,
-    Dual_Weapon
+    Dual_Weapon,
+    Nunchaku
 }
 public enum WeaponType
 {

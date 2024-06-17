@@ -31,13 +31,23 @@ public class GatesScreen : MonoBehaviour
         }
     }
 
+    
     private void SetCoordinates()//выставляет иконки по нужным координатам
     {
+        int counterX = 0;
+        int counterY = 0;
         for (int iconIndex = 0; iconIndex < childList.Count; iconIndex++)
         {
+            if (counterX == 11)
+            {
+                counterX = 0;
+                counterY -= 100;
+            }
             childList[iconIndex].transform.localPosition = startCoordinate;
-            childList[iconIndex].transform.localPosition += new Vector3(offsetForIconsOnX * iconIndex, offsetForIconsOnY);
+            childList[iconIndex].transform.localPosition += new Vector3(offsetForIconsOnX * counterX, offsetForIconsOnY + counterY);
+            counterX++;
         }
     }
+    
 
 }

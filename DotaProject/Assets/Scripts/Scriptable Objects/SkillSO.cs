@@ -37,4 +37,7 @@ public class SkillSO : ScriptableObject
     public bool IsDamaging = false;
     [HideInInspector] public bool IsCombinedDamage = false;
     [HideInInspector] public List<Element> damageType;
+
+    [SerializeField, Tooltip("Способность нужно добавить в список способностей в бестиарии?")]
+    public bool IsAddedInBestiary = true;
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f20d8c996bf6645be3d6075f3ad13b, type: 3}
+  m_Name: FireCompanion
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: f5a52f8bd86e8f746aec27564d122014, type: 3}
+  concept: {fileID: 21300000, guid: 37d4ba142ccea434a90b621ed08643d0, type: 3}
+  entityName: 
+  race: 4
+  typeAttack: 0
+  weapon: 1
+  weaponType: 1
+  attackElement: 09000000
+  skills:
+  - {fileID: 11400000, guid: 841a0ddae94d5944d9d983079513e4ff, type: 2}
+  - {fileID: 11400000, guid: 45a513a171753f843aea366f5bf89dde, type: 2}
+  nonCombatSkills:
+  - {fileID: 11400000, guid: 602d12cebc60a314fb16f074b0d6cb66, type: 2}
+  talanties: []

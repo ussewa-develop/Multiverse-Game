@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: BloodseekerData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 0d3a1e5630f163949a0afd26e932dc04, type: 3}
+  concept: {fileID: 21300000, guid: aeb7056fde42d1a468326da7514df080, type: 3}
+  entityName: Bloodseeker
+  race: 4
+  typeAttack: 0
+  weapon: 4
+  weaponType: 2
+  attackElement: 0000000008000000
+  skills:
+  - {fileID: 11400000, guid: 4fffe4e007d63e148800bf91a614958a, type: 2}
+  - {fileID: 11400000, guid: d099680b9d4c96548b470c0c7948bece, type: 2}
+  - {fileID: 11400000, guid: d924b1c8c67e74344a9d86260ad7e27c, type: 2}
+  - {fileID: 11400000, guid: b13d772b759519346ae5ed29b1bb8d2c, type: 2}
+  - {fileID: 11400000, guid: 9c13fb263e8ac3d4286f78f68a5e1775, type: 2}
+  nonCombatSkills:
+  - {fileID: 11400000, guid: 71aeda6ca61564a4ea50aa4dc3f61dc5, type: 2}
+  talanties: []
+  attribute: 1
+  multiverse: 0
+  constLevel: 0

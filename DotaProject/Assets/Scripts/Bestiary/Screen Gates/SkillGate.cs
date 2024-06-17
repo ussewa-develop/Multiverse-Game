@@ -117,6 +117,10 @@ public class SkillGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         float offset = 200f;
         float height = Math.Abs(point.localPosition.y) + panel.Background.sizeDelta.y;
+        if (entityScreen is SummonScreen)
+        {
+            height += 20f;//20f добавляется из-за маленькой погрешности в формуле для SummonScreen
+        }        
         if (height>entityScreen.ContentField.sizeDelta.y)
         {
             panel.transform.position = new Vector3(panel.transform.position.x, point.position.y);

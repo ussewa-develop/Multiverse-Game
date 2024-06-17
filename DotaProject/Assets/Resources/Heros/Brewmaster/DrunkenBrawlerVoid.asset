@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfbb7d19da930a4aa65168d1fbac219, type: 3}
+  m_Name: DrunkenBrawlerVoid
+  m_EditorClassIdentifier: 
+  skillType: 1
+  skillName: Drunken Brawler (void)
+  skillDesc: 
+  skillIcon: {fileID: 21300000, guid: c51e1cd0cf74ef24eb4adb5c5dfe99bf, type: 3}
+  cooldown: 0
+  manaCost: 0
+  actionPointCost: 0
+  IsHasSomeSkills: 1
+  otherSkills:
+  - {fileID: 11400000, guid: 3392efbca14c2ea419551523fee974f8, type: 2}
+  - {fileID: 11400000, guid: 0540f5bc86edbae45bc64adf64e0fc41, type: 2}
+  IsHasSummons: 0
+  summon: []
+  IsDamaging: 0
+  IsCombinedDamage: 0
+  damageType: 
+  IsAddedInBestiary: 1

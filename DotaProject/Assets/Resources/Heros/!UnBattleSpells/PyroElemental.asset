@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PyroElemental
   m_EditorClassIdentifier: 
   skillType: 1
-  skillName: 
+  skillName: Pyro Elemental
   skillDesc: 
   skillIcon: {fileID: 21300000, guid: 66d3a32efd0d73046a78900e1cc264e5, type: 3}
   cooldown: 0
@@ -24,4 +24,5 @@ MonoBehaviour:
   IsHasSummons: 0
   summon: []
   IsDamaging: 0
-  damageType: 0
+  IsCombinedDamage: 0
+  damageType: 

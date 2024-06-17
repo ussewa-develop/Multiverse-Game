@@ -15,11 +15,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 6781aaeb8ca1d7a4ba72ba507b65e290, type: 3}
   concept: {fileID: 21300000, guid: 168c79ba4514af545b7406349fef94af, type: 3}
   entityName: Boar
-  generalElement: 4
+  race: 2
   typeAttack: 1
   weapon: 3
   weaponType: 1
-  attackElement: 4
+  attackElement: 03000000
   skills:
   - {fileID: 11400000, guid: c8a184a38d7f98d4a85dc6643934039f, type: 2}
   nonCombatSkills: []
+  talanties: []
