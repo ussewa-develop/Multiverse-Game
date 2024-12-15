@@ -4,16 +4,19 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 
 public abstract class Cell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string cellName;
     [SerializeField] GameObject _highlight;
+    [SerializeField] GameObject _canMoveVisualizeObject;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private bool _isWalkable;
 
     public BaseUnit OccupiedUnit;
     public bool Walkable => _isWalkable && OccupiedUnit == null;
+    public bool InRadius { get; set;}
     public virtual void Init(int x, int y, ICoords coords)
     {
         Coords = coords;
@@ -48,18 +51,36 @@ public abstract class Cell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             }
             else
             {
-                CanvasManager.Instance.ShowSelectedEntity(OccupiedUnit);
+                UnitManager.Instance.SetSelectedEntity(OccupiedUnit);
             }
         }
         else
         {
-            if (UnitManager.Instance.SelectedHero != null)
+            if (UnitManager.Instance.SelectedHero != null && InRadius)
             {
                 UnitManager.Instance.SelectedHero.MoveOn(this);
-                UnitManager.Instance.SelectedHero = null;
             }
-            CanvasManager.Instance.ClearSelectedEntity();
+            UnitManager.Instance.SetSelectedHero(null);
         }
+    }
+
+    public void CanMoveVisualize(bool value)// стандартный
+    {
+        CanMoveVisualize(value, ShowCellMode.InMoveSpeedRadius);
+    }
+
+    public void CanMoveVisualize(bool value, ShowCellMode cellMode)//вариация возможно для будущего
+    {
+        switch (cellMode)
+        {
+            case ShowCellMode.InMoveSpeedRadius:
+                if (!_isWalkable) return;
+                break;
+            case ShowCellMode.IgnoreWalkable:
+                break;
+        }
+        _canMoveVisualizeObject.SetActive(value);
+        return;
     }
 
     protected void ChangeColor(Color color)

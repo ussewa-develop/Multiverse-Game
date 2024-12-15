@@ -65,8 +65,8 @@ public class CellManager : MonoBehaviour
         */
         _mainCamera.transform.position = new Vector3(offsetX, offsetY, offsetZ);//перемещаем камеру в центр матрицы
         CacheNeighbors(_cells);
-    }
 
+    }
     private void CacheNeighbors(Dictionary<Vector2,Cell> cells)
     {
         foreach (var cell in cells)
@@ -81,6 +81,16 @@ public class CellManager : MonoBehaviour
     {
         if(_cells.TryGetValue(position, out var cell))
         {
+            return cell;
+        }
+        return null;
+    }
+
+    public Cell GetWalkableCellAtPosition(Vector2 position)//модификация метода выше для получения клетки, по которой можно ходить
+    {
+        if(_cells.TryGetValue(position, out var cell))
+        {
+            if(!cell.Walkable) return null;
             return cell;
         }
         return null;

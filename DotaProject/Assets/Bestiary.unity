@@ -492,7 +492,8 @@ MonoBehaviour:
   startCoordinate: {x: 175, y: -122}
   offsetForIconsOnX: 147
   offsetForIconsOnY: 0
-  artifactIconPrefab: {fileID: 3027547431578116593, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+  maxItemsOnX: 11
+  artifactGroupPrefab: {fileID: 0}
   canvasForPanel: {fileID: 0}
   scrollView: {fileID: 0}
 --- !u!1 &147308549
@@ -2252,6 +2253,7 @@ MonoBehaviour:
   startCoordinate: {x: -770, y: 440}
   offsetForIconsOnX: 147
   offsetForIconsOnY: 0
+  maxItemsOnX: 13
   heroScreen: {fileID: 1544755980}
   heroIconPrefab: {fileID: 5248868229018846889, guid: 0fcf08323c4f4e3409c7aeb0f870b429, type: 3}
   checkOnInventory: 0
@@ -5151,7 +5153,8 @@ MonoBehaviour:
   startCoordinate: {x: 184, y: -96}
   offsetForIconsOnX: 147
   offsetForIconsOnY: 0
-  artifactIconPrefab: {fileID: 3027547431578116593, guid: cbf2eebcf7a0e604ca90f079d364399d, type: 3}
+  maxItemsOnX: 4
+  artifactGroupPrefab: {fileID: 8569640838913295557, guid: f1abb895e7e3a6d4199cdffb5943f37e, type: 3}
   canvasForPanel: {fileID: 371408369}
   scrollView: {fileID: 340010391}
 --- !u!1 &1268647112

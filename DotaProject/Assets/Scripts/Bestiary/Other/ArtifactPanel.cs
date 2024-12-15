@@ -98,6 +98,7 @@ public class ArtifactPanel : MonoBehaviour
 
     public void Create(ArtifactGate artifactGate, Canvas artifactCanvas) //создание панельки описания артефакта
     {
+        //if (artifactGate.artifact == null) return;
         gameObject.transform.SetParent(artifactCanvas.transform, false);
         itemNameText.text = artifactGate.artifact.itemName;
         itemDescText.text = artifactGate.artifact.itemDesc;    

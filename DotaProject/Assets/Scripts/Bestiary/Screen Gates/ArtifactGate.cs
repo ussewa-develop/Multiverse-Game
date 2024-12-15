@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] public ArtifactSO artifact { get; private set;}
+    [field: SerializeField] public ArtifactSO artifact { get; private set;}
     [SerializeField] ArtifactPanel artifactPanelPrefab;
 
     private RectTransform scrollView;
@@ -15,9 +15,12 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void Initialize(ArtifactSO artifact, Canvas canvas, RectTransform scrollView)
     {
-        this.artifact = artifact;
-        gameObject.name = artifact.itemName;
-        GetComponent<Image>().sprite = artifact.icon;
+        if(artifact != null)
+        {
+            this.artifact = artifact;
+            gameObject.name = artifact.itemName;
+            GetComponent<Image>().sprite = artifact.icon;
+        }
         canvasForArtDesc = canvas;
         this.scrollView = scrollView;
     }
@@ -57,11 +60,11 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             point -= new Vector3 (0, skill.Background.sizeDelta.y);
         }
     }
-
+    
     public void CheckHorizontalBorders(Transform point, ArtifactPanel panel)
     {
         float distanceToCenter = scrollView.sizeDelta.x/2f;
-        float localPosPoint = point.localPosition.x;
+        float localPosPoint = point.parent.localPosition.x;
         float currentX;
 
         if (localPosPoint <= distanceToCenter) //число в диапазоне от 0 до до половины разрешения экрана
@@ -80,7 +83,6 @@ public class ArtifactGate : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         panel.transform.position = transform.position - new Vector3(-offsetX, offsetY, 0);
     }
-
     public void DestroyPanel()
     {
         if (panel != null)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f20d8c996bf6645be3d6075f3ad13b, type: 3}
   m_Name: HawkData
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: f5a52f8bd86e8f746aec27564d122014, type: 3}
+  icon: {fileID: 21300000, guid: 12e1f155d0f97964b9da007722ab14dd, type: 3}
   concept: {fileID: 21300000, guid: 201ec6bc98f511a4aa23d27a2be24153, type: 3}
   entityName: Hawk
   race: 2
@@ -21,6 +21,7 @@ MonoBehaviour:
   weaponType: 1
   attackElement: 00000000
   skills:
+  - {fileID: 11400000, guid: f35bbdb749f2641478a253c19b83fb0e, type: 2}
   - {fileID: 11400000, guid: 0e5a1244b48ecd34baddcc17b7a95d56, type: 2}
   nonCombatSkills:
   - {fileID: 11400000, guid: 0a5f8e4d6d162a64f909f08af21c590d, type: 2}

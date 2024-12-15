@@ -146,6 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f154bbf6e16d43ae086fbb4b41772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artifact: {fileID: 11400000, guid: 18bf1a5a918880545b244aa6566ef433, type: 2}
-  artifactPanelPrefab: {fileID: 2136639834762923830, guid: f1abb895e7e3a6d4199cdffb5943f37e, type: 3}
+  artifactPanelPrefab: {fileID: 2136639834762923830, guid: 3f64c53fd0073394ca8626c41395f95d, type: 3}
   canvasForArtDesc: {fileID: 0}

@@ -69,6 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe57ed3401e77c14e9ed19dbb914a526, type: 3}
+--- !u!1 &135426401949362507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8153854315597128633, guid: fe57ed3401e77c14e9ed19dbb914a526, type: 3}
+  m_PrefabInstance: {fileID: 8127148863037721330}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2226081297465730402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7939230354441809808, guid: fe57ed3401e77c14e9ed19dbb914a526, type: 3}
@@ -88,9 +93,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellName: Mountain
   _highlight: {fileID: 4146879972938256153}
+  _canMoveVisualizeObject: {fileID: 135426401949362507}
   _spriteRenderer: {fileID: 2226081297465730403}
   _isWalkable: 0
   OccupiedUnit: {fileID: 0}
+  Neighbors: []
 --- !u!212 &2226081297465730403 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7939230354441809809, guid: fe57ed3401e77c14e9ed19dbb914a526, type: 3}

@@ -35,7 +35,6 @@ public static class Pathfinding
                     currentPathCell = currentPathCell.Connection;
                     count--;
                     if (count < 0) throw new Exception();
-                    Debug.Log("sdfsdf");
                 }
                 Debug.Log(path.Count);
                 return path;

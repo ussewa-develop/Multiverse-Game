@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: CentaurWarrunnerData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: d1d6ba02a8c6ea24c9c6805701427477, type: 3}
+  concept: {fileID: 21300000, guid: 67c0d07a6f902bf43bfa5cad83ce5bb6, type: 3}
+  entityName: Centaur Warrunner
+  race: 5
+  typeAttack: 0
+  weapon: 2
+  weaponType: 0
+  attackElement: 00000000
+  skills:
+  - {fileID: 11400000, guid: c3375866723974f4785af8ce92072102, type: 2}
+  - {fileID: 11400000, guid: 6796135ad7c56d04cbd92818235e6cc9, type: 2}
+  - {fileID: 11400000, guid: ec570be3721da4f48ac07fbdd7523a93, type: 2}
+  - {fileID: 11400000, guid: 26d3b1822bf5819439da3393f43d30f8, type: 2}
+  - {fileID: 11400000, guid: e4806f868a0ad924b8ba2f3a4fc63593, type: 2}
+  - {fileID: 11400000, guid: 9939a034a9d7e234b8c8a4aaf49062e2, type: 2}
+  nonCombatSkills: []
+  talanties: []
+  attribute: 0
+  multiverse: 0
+  constLevel: 0

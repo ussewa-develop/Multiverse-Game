@@ -15,6 +15,11 @@ public static class SODataLoader
         return LoadAllSO<ArtifactSO>("Artifacts/!ArtifactsData");
     }
 
+    public static ArtifactGroupSO[] LoadAllArtGroupSO()
+    {
+        return LoadAllSO<ArtifactGroupSO>("Artifacts/!ArtifactsGroupsData");
+    }
+
     public static Type[] LoadAllSO<Type>(string path) where Type: ScriptableObject 
     {
         Type[] allSO = Resources.LoadAll<Type>(path);

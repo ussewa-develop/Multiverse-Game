@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037a68584a566674ebc6b957897b1158, type: 3}
+  m_Name: Abaddon
+  m_EditorClassIdentifier: 
+  Faction: 0
+  unitPrefab: {fileID: 1193590690926216949, guid: 0edf1ed1a54d5014aa3d834f5235e553, type: 3}

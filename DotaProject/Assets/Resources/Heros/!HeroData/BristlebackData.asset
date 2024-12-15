@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c43ae69bc08d5c4a88bc7c44acb0730, type: 3}
+  m_Name: BristlebackData
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 4a0ac74e5ce193042976b72defb239a9, type: 3}
+  concept: {fileID: 21300000, guid: de72291935c58184faaa37c41115ebbb, type: 3}
+  entityName: Bristleback
+  race: 3
+  typeAttack: 0
+  weapon: 5
+  weaponType: 0
+  attackElement: 00000000
+  skills:
+  - {fileID: 11400000, guid: f4dc602c4fae59e45ba0b19b87d910fc, type: 2}
+  - {fileID: 11400000, guid: 8828832d02e98d44e90a75e1f80aed40, type: 2}
+  - {fileID: 11400000, guid: 6496363a691451441b67fea7bc4f0d17, type: 2}
+  - {fileID: 11400000, guid: 114d6b2abf0220a46b6fb20e68fc9d8b, type: 2}
+  - {fileID: 11400000, guid: d36266209873d4d4b8779c39c5f25782, type: 2}
+  nonCombatSkills: []
+  talanties: []
+  attribute: 0
+  multiverse: 0
+  constLevel: 0

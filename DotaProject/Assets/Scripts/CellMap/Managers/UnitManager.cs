@@ -9,6 +9,11 @@ public class UnitManager : MonoBehaviour
     public BaseHero SelectedHero;
 
     private List<ScriptableUnit> _units;
+        
+    public delegate void EntitySelected(BaseUnit entity);
+    public static event EntitySelected OnEntitySelected;
+    
+
     private void Awake()
     {
         Instance = this;
@@ -17,7 +22,7 @@ public class UnitManager : MonoBehaviour
 
     public void SpawnHeroes()
     {
-        var heroCount = 1;
+        var heroCount = 2;
         for(int i = 0; i < heroCount; i++)
         {
             var randomPrefab = GetRandomUnit<BaseHero>(Faction.Hero);
@@ -50,10 +55,16 @@ public class UnitManager : MonoBehaviour
         return (T)_units.Where(u=>u.Faction == faction).OrderBy(o => Random.value).First().unitPrefab;
     }
 
+    public void SetSelectedEntity(BaseUnit unit)
+    {
+        OnEntitySelected?.Invoke(unit);
+    }
+
     public void SetSelectedHero(BaseHero hero) 
     {
         SelectedHero = hero;
-        CanvasManager.Instance.ShowSelectedEntity(hero);
+        SetSelectedEntity(hero);
+        if(hero != null) hero.ShowCanMove();
     }
 
 }

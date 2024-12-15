@@ -13,6 +13,16 @@ public class CanvasManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        UnitManager.OnEntitySelected += ShowSelectedEntity;
+    }
+
+    private void OnDestroy()
+    {
+        UnitManager.OnEntitySelected -= ShowSelectedEntity;
+    }
+
     public void ShowCellInfo(Cell cell)
     {
         if(cell == null)
@@ -38,12 +48,12 @@ public class CanvasManager : MonoBehaviour
 
     public void ShowSelectedEntity(BaseUnit unit)
     {
-        if(unit == null)
+        if (unit == null)
         {
             selectedEntityUI.gameObject.SetActive(false);
             return;
         }
-        selectedEntityUI.entityNameText.text = unit.name;
+        selectedEntityUI.entityNameText.text = unit.UnitName;
         selectedEntityUI.gameObject.SetActive(true);
     }
 

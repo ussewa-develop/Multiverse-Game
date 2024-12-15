@@ -24,6 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ce0d206d77797c4db86598af95d56c0, type: 2}
   - {fileID: 11400000, guid: 7599ff03bbc2cfd44b93417c0945ca6c, type: 2}
   - {fileID: 11400000, guid: 869f66486b5a87a4f94633b6d94f9006, type: 2}
+  - {fileID: 11400000, guid: d7eb52daaee791647b3e12bf83f192df, type: 2}
   - {fileID: 11400000, guid: 6479e66cd88b0664da616e2c55f6efb3, type: 2}
   - {fileID: 11400000, guid: cc30faaf5a52fc147944461a2596a40e, type: 2}
   nonCombatSkills: []
